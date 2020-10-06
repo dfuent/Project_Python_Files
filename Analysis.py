@@ -41,6 +41,6 @@ df.to_csv('Test Speaker.csv')
 tdf['China Count'] = tdf.Transcript.str.count('China')
 # tdf.to_csv('new_data.csv')
 # print(tdf.head())
-wordPivot = tdf.pivot_table(index = ['Speaker_fin'], values = ['China Count'], aggfunc = 'count') # pivot table aggregates total number of word mentions across a speaker
+wordPivot = tdf.pivot_table(index = ['Speaker_fin'], values = ['China Count'], aggfunc = 'sum') # pivot table aggregates total number of word mentions across a speaker
 # print(wordPivot)
 wordPivot.to_csv('testwords.csv') 
