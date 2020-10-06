@@ -37,3 +37,10 @@ df['Speaker_fin'] = np.where(df['Speaker_Clean'].str.split(' ').str.len() > 3, d
 
 df.to_csv('Test Speaker.csv')
 
+# test case to find China in each row in csv. next i'm going to investigate how to search against a list of words
+tdf['China Count'] = tdf.Transcript.str.count('China')
+# tdf.to_csv('new_data.csv')
+# print(tdf.head())
+wordPivot = tdf.pivot_table(index = ['Speaker_fin'], values = ['China Count'], aggfunc = 'count') # pivot table aggregates total number of word mentions across a speaker
+# print(wordPivot)
+wordPivot.to_csv('testwords.csv') 
