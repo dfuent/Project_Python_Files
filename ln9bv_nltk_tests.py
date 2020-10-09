@@ -8,7 +8,7 @@ Preliminary NLTK Tests / Experimentation
 
 import nltk, re, pprint
 from nltk import word_tokenize
-
+from nltk import FreqDist
 
 
 # read csv in
@@ -79,8 +79,8 @@ from nltk.corpus import stopwords
 
 # function to determine percentage of words in transcripts that AREN'T 'stopwords'
 def nonstop_percent(text):
-    stopwords = nltk.corpus.stopwords.words('english')
-    nonstop = [w for w in text if w.lower() not in stopwords]
+    stops = nltk.corpus.stopwords.words('english')
+    nonstop = [w for w in text if w.lower() not in stops]
     return (len(nonstop) / len(text) * 100)
 
 print(nonstop_percent(transcripts_sans_punct_with_dups)) # =63.93%
