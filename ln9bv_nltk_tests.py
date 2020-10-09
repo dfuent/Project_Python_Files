@@ -69,6 +69,7 @@ print(transcripts_all.dispersion_plot(["citizens", "democracy", "freedom", "Demo
 print(transcripts_all.collocations())
 
 # processes a sequence of words, and attaches a part of speech tag to each word
+# commented out because it takes a lot of computing power!
 # debates_tagged = nltk.pos_tag(transcripts_sans_punct)
 # print(debates_tagged)
 
@@ -84,7 +85,7 @@ def nonstop_percent(text):
     return (len(nonstop) / len(text) * 100)
 
 print(nonstop_percent(transcripts_sans_punct_with_dups)) # =63.93%
-#
+
 
 
 # to find a pair of words
