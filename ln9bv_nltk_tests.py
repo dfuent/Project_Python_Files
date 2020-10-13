@@ -6,14 +6,21 @@ Preliminary NLTK Tests / Experimentation
 """
 
 
-import nltk, re, pprint
+import nltk, re, pprint, pandas as pd, numpy as np
 from nltk import word_tokenize
 from nltk import FreqDist
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
+#nltk.download('vader_lexicon')
 
 # read csv in
-with open('Transcripts_df.csv', encoding = "utf-8") as f:
+with open('Transcripts_final.csv', encoding = "utf-8") as f:
     raw = f.read()
+    
+df = pd.read_csv('Transcripts_final.csv') # call in for sentiment analysis
+
+df['Transcript'] = df['Transcript'].fillna(value = 'xx')
+
 
 # separate all language into 'tokens' (break up string into words and punctuation)    
 tokens = word_tokenize(raw)
@@ -86,7 +93,47 @@ def nonstop_percent(text):
 
 print(nonstop_percent(transcripts_sans_punct_with_dups)) # =63.93%
 
-
-
 # to find a pair of words
 #print(transcripts_all.findall(r"<I> (<.*>) <am>"))
+
+#%%
+
+###### start sentiment analysis ######
+# I will comment later #
+
+sid = SentimentIntensityAnalyzer() 
+
+t_list = df['Transcript'].tolist()
+
+d_t = {}
+
+for j in t_list:
+    try:
+        l = []
+
+        ss = sid.polarity_scores(j)
+        for i in sorted(ss):
+            print('{0}: {1}, '.format(i, ss[i]), end='')
+            l.append((i, ss[i]))
+
+        d_t[j] = l
+        print()
+    except:
+        pass
+#print(d_t)
+
+df['Sentiment'] = df['Transcript'].map(d_t)
+
+print(df.head())
+
+df = df[df.columns.dropna()]
+
+print(df.dtypes)
+
+df[['compound', 'neg', 'neu', 'pos']] = pd.DataFrame(df.Sentiment.values.tolist(), index= df.index)
+
+
+#df_sent = pd.DataFrame(df['Sentiment'].tolist(), columns = ['compound', 'neg', 'neu', 'pos'])
+
+df.to_csv('Transcripts_final_sent.csv')
+
