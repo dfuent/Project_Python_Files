@@ -88,3 +88,28 @@ Carter76 # includes (barely audible) in Carter word count
 #both candidates/parties 1976 (without moderator/others)
 allcandidates76 = Ford76.append([Carter76])
 allcandidates76
+
+#Begin 1980 debates
+#October 28, 1980
+Oct28_1980_debate = df[df["Debate"]=='October 28, 1980 Debate Transcript']
+Oct28_1980_debate
+
+#September 21, 1980 debate
+Sept21_1980_debate = df[df["Debate"]=='September 21, 1980 Debate Transcript']
+Sept21_1980_debate
+
+#full debate transcript 1980, includes moderators and any other speakes in addition to candidates
+debates_1980 = Oct28_1980_debate.append([Sept21_1980_debate])
+debates_1980
+
+#for Carter/Dems 1980; no VP debate in 1980
+Carter80 = debates_1980[(debates_1980["Speaker_fin"]=='CARTER')]
+Carter80
+
+#for Reagan/GOP in 1980, no VP debate
+Reagan80 = debates_1980[(debates_1980["Speaker_fin"]=='REAGAN')]
+Reagan80
+
+#for Anderson/Ind. 1980, no VP debate in 1980
+Anderson80 = debates_1980[(debates_1980["Speaker_fin"]=='ANDERSON')]
+Anderson80
