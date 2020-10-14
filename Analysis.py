@@ -113,3 +113,7 @@ Reagan80
 #for Anderson/Ind. 1980, no VP debate in 1980
 Anderson80 = debates_1980[(debates_1980["Speaker_Clean"]=='ANDERSON')]
 Anderson80
+
+#all candidates 1980
+allcandidates80 = Anderson80.append([Reagan80, Carter80]) 
+allcandidates80
