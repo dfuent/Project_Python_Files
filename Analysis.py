@@ -48,11 +48,11 @@ wordPivot.to_csv('testwords.csv')
 #creation of dataframes by election cycle and by candidate/party
 #Begin 1960
 # create Nixon/GOP dataframe for 1960
-Nixondf = df[df["Speaker_fin"]=='NIXON']
+Nixondf = df[df["Speaker_Clean"]=='NIXON']
 Nixondf
 
 # create Kennedy/Dem dataframe for 1960
-Kennedydf = df[df["Speaker_fin"]=='KENNEDY']
+Kennedydf = df[df["Speaker_Clean"]=='KENNEDY']
 Kennedydf # the copyright information gets attributed to Kennedy
 
 # create 1960 both candidates dataframe
@@ -103,13 +103,13 @@ debates_1980 = Oct28_1980_debate.append([Sept21_1980_debate])
 debates_1980
 
 #for Carter/Dems 1980; no VP debate in 1980
-Carter80 = debates_1980[(debates_1980["Speaker_fin"]=='CARTER')]
+Carter80 = debates_1980[(debates_1980["Speaker_Clean"]=='CARTER')]
 Carter80
 
 #for Reagan/GOP in 1980, no VP debate
-Reagan80 = debates_1980[(debates_1980["Speaker_fin"]=='REAGAN')]
+Reagan80 = debates_1980[(debates_1980["Speaker_Clean"]=='REAGAN')]
 Reagan80
 
 #for Anderson/Ind. 1980, no VP debate in 1980
-Anderson80 = debates_1980[(debates_1980["Speaker_fin"]=='ANDERSON')]
+Anderson80 = debates_1980[(debates_1980["Speaker_Clean"]=='ANDERSON')]
 Anderson80
