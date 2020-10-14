@@ -10,6 +10,10 @@ import nltk, re, pprint, pandas as pd, numpy as np
 from nltk import word_tokenize
 from nltk import FreqDist
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import plotly.express as px, plotly.io as pio, matplotlib.pyplot as plt
+
+
+pio.renderers.default='browser'
 
 #nltk.download('vader_lexicon')
 
@@ -98,6 +102,9 @@ print(nonstop_percent(transcripts_sans_punct_with_dups)) # =63.93%
 
 #%%
 
+
+# dfuentes code 
+
 ###### start sentiment analysis ######
 # I will comment later #
 
@@ -130,7 +137,7 @@ df = df[df.columns.dropna()]
 
 print(df.dtypes)
 
-df[['compound', 'neg', 'neu', 'pos']] = pd.DataFrame(df.Sentiment.values.tolist(), index= df.index)
+df[['compound', 'neg', 'neu', 'pos']] = pd.DataFrame(df.Sentiment.values.tolist())
 
 
 
@@ -141,5 +148,42 @@ df[['pos', 'pos_val']] = pd.DataFrame(df['pos'].tolist(), index=df.index)
 
 #df_sent = pd.DataFrame(df['Sentiment'].tolist(), columns = ['compound', 'neg', 'neu', 'pos'])
 
-df.to_csv('Transcripts_final.csv')
+df['word_count'] = df['Transcript']
 
+df.to_csv('Transcripts_new.csv')
+
+# start graphing process
+
+debates_unique = df['Debate'].unique()
+
+
+for d in debates_unique:
+    try:
+        df_new = df[df['Debate'] == d]
+        #df_new['Speaker_standardized'].fillna('xx', inplace = True)
+        df_new.head()
+        df_new = df_new.replace(r'^\s*$', np.nan, regex=True)
+        df_new = df_new.fillna('xx')
+        df_new = df_new[df_new['Purpose'] == 'Candidate']
+        df_new['cumsum'] = df_new.groupby(['Affiliation'])['comp_val', 'word_count'].cumsum()
+        df_new['aff_speaker'] = df_new['Affiliation'] + ": " + df_new['Speaker_standardized']
+        cands = df_new['aff_speaker'].unique()
+        col = {}
+        for i in cands:
+            if 'Democrat' in i:
+                col[i] = 'blue'
+            elif 'Republican' in i:
+                col[i] = 'red'
+            else:
+                col[i] = 'green'
+               
+        
+        df_new.to_csv('groupby.csv')
+        
+        
+        fig = px.line(df_new, x = 'Line Count', y = 'cumsum', title = d , color = 'aff_speaker', 
+                      color_discrete_map=col)
+        fig.show()
+    except:
+        pass
+#
