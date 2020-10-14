@@ -117,3 +117,163 @@ Anderson80
 #all candidates 1980
 allcandidates80 = Anderson80.append([Reagan80, Carter80]) 
 allcandidates80
+
+#Begin 1984 debates
+#October 7, 1984
+Oct7_1984_debate = df[df["Debate"]=='October 7, 1984 Debate Transcript']
+Oct7_1984_debate
+
+#October 21, 1984
+Oct21_1984_debate = df[df["Debate"]=='October 21, 1984 Debate Transcript']
+Oct21_1984_debate 
+
+#October 11, 1984 (VP debate)
+Oct11_1984_debate = df[df["Debate"]=='October 11, 1984 Debate Transcript']
+Oct11_1984_debate 
+
+#all debate transcripts 1984, includes moderator and any other speakers
+debates_1984 = Oct11_1984_debate.append([Oct21_1984_debate, Oct7_1984_debate])
+debates_1984
+
+#Democratic party 1984 (Mondale)
+Mondale84 = debates_1984[(debates_1984["Speaker_standardized"]=='Walter Mondale')]
+Mondale84
+
+#Dem party 1984 (Ferraro)
+Ferraro84 = debates_1984[(debates_1984["Speaker_standardized"]=='Geraldine Ferraro')]
+Ferraro84
+
+#all Dem transcript 1984
+Dem1984 = Mondale84.append([Ferraro84])
+Dem1984
+
+#Republican party 1984 (Reagan)
+Reagan84 = debates_1984[(debates_1984["Speaker_standardized"]=='Ronald Reagan')]
+Reagan84
+
+#Republican party 1984 (Bush)
+Bush84 = debates_1984[(debates_1984["Speaker_standardized"]=='George W. Bush')]
+Bush84
+
+#full Republican party 1984
+GOP1984 = Reagan84.append([Bush84])
+GOP1984
+
+allcandidates84 = GOP1984.append([Dem1984]) 
+allcandidates84
+
+#Begin 1988 debates
+#October 5, 1988
+Oct5_1988_debate = df[df["Debate"]=='October 5, 1988 Debate Transcripts']
+Oct5_1988_debate
+
+#September 25, 1988 debate
+Sept25_1988_debate = df[df["Debate"]=='September 25, 1988 Debate Transcript']
+Sept25_1988_debate
+
+#October 13, 1988
+Oct13_1988_debate = df[df["Debate"]=='October 13, 1988 Debate Transcript']
+Oct13_1988_debate
+
+#full debate transcript 1988, includes moderators and any other speakes in addition to candidates
+debates_1988 = Oct13_1988_debate.append([Sept25_1988_debate, Oct5_1988_debate])
+debates_1988
+
+#Bush 1988
+Bush88 = debates_1988[(debates_1988["Speaker_standardized"]=='George W. Bush')]
+Bush88
+
+#Quayle 1988
+Quayle88 = debates_1988[(debates_1988["Speaker_standardized"]=='Dan Quayle')]
+Quayle88
+
+#Dukakis 1988
+Dukakis88 = debates_1988[(debates_1988["Speaker_standardized"]=='Michael Dukakis')]
+Dukakis88
+
+#Bentsen 1988
+Bentsen88 = debates_1988[(debates_1988["Speaker_standardized"]=='Lloyd Bentsen')]
+Bentsen88
+
+#GOP 1988
+GOP1988 = Bush88.append([Quayle88]) 
+GOP1988
+
+#Dem 1988
+Dem1988 = Dukakis88.append([Bentsen88]) 
+Dem1988
+
+#allcandidates 1988
+allcandidates88 = GOP1988.append([Dem1988]) 
+allcandidates88
+
+#Begin 1992
+#Oct 15, 1992 second half
+Oct15_1992_2ndhalf_debate = df[df["Debate"]=='October 15, 1992 Second Half Debate Transcript']
+Oct15_1992_2ndhalf_debate
+
+#Oct 15 first half, 1992 debate
+Oct15_1992_1sthalf_debate = df[df["Debate"]=='October 15, 1992 First Half Debate Transcript']
+Oct15_1992_1sthalf_debate
+
+#October 19, 1992
+Oct19_1992_debate = df[df["Debate"]=='October 19, 1992 Debate Transcript']
+Oct19_1992_debate
+
+#October 11, 1992 first half
+Oct11_1992_1sthalf_debate = df[df["Debate"]=='October 11, 1992 First Half Debate Transcript']
+Oct11_1992_1sthalf_debate
+
+#October 11, 1992 second half 
+Oct11_1992_2ndhalf_debate = df[df["Debate"]=='October 11, 1992 Second Half Debate Transcript']
+Oct11_1992_2ndhalf_debate
+
+#October 13, 1992
+Oct13_1992_debate = df[df["Debate"]=='October 13, 1992 Debate Transcript']
+Oct13_1992_debate
+
+#full debate transcript 1992, includes moderators and any other speakes in addition to candidates
+debates_1992 = Oct13_1992_debate.append([Oct15_1992_1sthalf_debate, Oct15_1992_2ndhalf_debate, Oct11_1992_1sthalf_debate, Oct11_1992_2ndhalf_debate, Oct19_1992_debate])
+debates_1992
+
+#Bush1992
+Bush92 = debates_1992[(debates_1992["Speaker_standardized"]=='George W. Bush')]
+Bush92
+
+#Quayle1992
+Quayle92 = debates_1992[(debates_1992["Speaker_standardized"]=='Dan Quayle')]
+Quayle92
+
+#Clinton1992
+Clinton92 = debates_1992[(debates_1992["Speaker_standardized"]=='Bill Clinton')]
+Clinton92
+
+#Gore1992
+Gore92 = debates_1992[(debates_1992["Speaker_standardized"]=='Al Gore')]
+Gore92
+
+#Perot1992
+Perot92 = debates_1992[(debates_1992["Speaker_standardized"]=='Ross Perot')]
+Perot92
+
+#Stockdale1992
+Stockdale92 = debates_1992[(debates_1992["Speaker_standardized"]=='Adm. James Stockdale')]
+Stockdale92
+
+#GOP1992
+GOP1992=Bush92.append([Quayle88])
+GOP1992
+
+#Dem1992
+
+Dem1992=Clinton92.append([Gore92])
+Dem1992
+
+#Ind1992
+Ind1992=Perot92.append([Stockdale92])
+Ind1992
+
+#all candidates 1992
+allcandidates92 = GOP1992.append([Dem1992, Ind1992]) 
+allcandidates92
+
