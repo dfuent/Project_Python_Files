@@ -19,6 +19,19 @@ def speaker_map(row):
         else:
             return np.nan
 
+def find_colon(row):
+    i = 0
+    try:
+        for r in row['Transcript'].split(' '): 
+            i += 1
+            if r.find(':') > 0:
+                if i < 4:
+                    return i
+                else:
+                    return 0
+        return 0
+    except:
+        return 0
 
 df = pd.read_csv('Transcripts_df.csv')
 
@@ -37,6 +50,11 @@ df['Speaker_Clean'] = df['Speaker_Clean'].fillna(method='ffill')
 #df['Speaker_Clean'] = np.where(df['Speaker_Clean'].isnull(), df['Speaker'], df['Speaker_Clean'])
 df['Speaker_fin'] = np.where(df['Speaker_Clean'].str.split(' ').str.len() > 3, df['Speaker'], df['Speaker_Clean'])
 df['Speaker_fin'] = np.where(df['Speaker_fin'].isnull(), df['Speaker_Clean'], df['Speaker_fin'])
+df['word_count'] = df['Transcript'].str.split(' ').str.len()
+df['flag'] = df.apply(find_colon, axis = 1)
+
+df['word_count'] = df['word_count'] - df['flag']
+df = df.drop(['flag', 'Speaker'], axis=1)
 df.fillna('xx')
 
 print(df.head())
