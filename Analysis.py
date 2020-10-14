@@ -48,11 +48,11 @@ wordPivot.to_csv('testwords.csv')
 #creation of dataframes by election cycle and by candidate/party
 #Begin 1960
 # create Nixon/GOP dataframe for 1960
-Nixondf = df[df["Speaker_Clean"]=='NIXON']
+Nixondf = df[df["Speaker_standardized"]=='Richard Nixon']
 Nixondf
 
 # create Kennedy/Dem dataframe for 1960
-Kennedydf = df[df["Speaker_Clean"]=='KENNEDY']
+Kennedydf = df[df["Speaker_standardized"]=='John F. Kennedy']
 Kennedydf # the copyright information gets attributed to Kennedy
 
 # create 1960 both candidates dataframe
@@ -78,11 +78,11 @@ debates_1976
 
 #for Ford/GOP 1976; Ford76 is also what we have for the GOP in 1976 because we don't have the VP debate transcript
 
-Ford76 = debates_1976[(debates_1976["Speaker_fin"]=='FORD')]
+Ford76 = debates_1976[(debates_1976["Speaker_standardized"]=='Gerald Ford')]
 Ford76 #row 810 attributes speech from a Mr. Kraft to Ford
 
 #Carter/Dem 1976 debates; Carter76 is also what we have for Dems in 1976 because we don't have the VP debate transcript
-Carter76 = debates_1976[(debates_1976["Speaker_fin"]=='CARTER')]
+Carter76 = debates_1976[(debates_1976["Speaker_standardized"]=='Jimmy Carter')]
 Carter76 # includes (barely audible) in Carter word count
 
 #both candidates/parties 1976 (without moderator/others)
@@ -103,15 +103,15 @@ debates_1980 = Oct28_1980_debate.append([Sept21_1980_debate])
 debates_1980
 
 #for Carter/Dems 1980; no VP debate in 1980
-Carter80 = debates_1980[(debates_1980["Speaker_Clean"]=='CARTER')]
+Carter80 = debates_1980[(debates_1980["Speaker_standardized"]=='Jimmy Carter')]
 Carter80
 
 #for Reagan/GOP in 1980, no VP debate
-Reagan80 = debates_1980[(debates_1980["Speaker_Clean"]=='REAGAN')]
+Reagan80 = debates_1980[(debates_1980["Speaker_standardized"]=='Ronald Reagan')]
 Reagan80
 
 #for Anderson/Ind. 1980, no VP debate in 1980
-Anderson80 = debates_1980[(debates_1980["Speaker_Clean"]=='ANDERSON')]
+Anderson80 = debates_1980[(debates_1980["Speaker_standardized"]=='Ronald Reagan')]
 Anderson80
 
 #all candidates 1980
