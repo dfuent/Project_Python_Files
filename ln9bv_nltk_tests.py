@@ -133,7 +133,13 @@ print(df.dtypes)
 df[['compound', 'neg', 'neu', 'pos']] = pd.DataFrame(df.Sentiment.values.tolist(), index= df.index)
 
 
+
+df[['compound', 'comp_val']] = pd.DataFrame(df['compound'].tolist(), index=df.index)
+df[['neg', 'neg_val']] = pd.DataFrame(df['neg'].tolist(), index=df.index)   
+df[['neu', 'neu_val']] = pd.DataFrame(df['neu'].tolist(), index=df.index) 
+df[['pos', 'pos_val']] = pd.DataFrame(df['pos'].tolist(), index=df.index) 
+
 #df_sent = pd.DataFrame(df['Sentiment'].tolist(), columns = ['compound', 'neg', 'neu', 'pos'])
 
-df.to_csv('Transcripts_final_sent.csv')
+df.to_csv('Transcripts_final.csv')
 
