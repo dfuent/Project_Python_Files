@@ -277,3 +277,47 @@ Ind1992
 allcandidates92 = GOP1992.append([Dem1992, Ind1992]) 
 allcandidates92
 
+#begin 1996 debates
+#Oct 6, 1996
+Oct6_1996_debate = df[df["Debate"]=='October 6, 1996 Debate Transcript']
+Oct6_1996_debate
+
+#Oct 16, 1996
+Oct16_1996_debate = df[df["Debate"]=='October 16, 1996 Debate Transcript']
+Oct16_1996_debate
+
+#Oct 9, 1996
+Oct9_1996_debate = df[df["Debate"]=='October 9, 1996 Debate Transcript']
+Oct9_1996_debate
+
+#full debate transcript 1996, includes moderators and any other speakes in addition to candidates
+debates_1996 = Oct9_1996_debate.append([Oct6_1996_debate, Oct16_1996_debate])
+debates_1996
+
+#Clinton96
+Clinton96 = debates_1996[(debates_1996["Speaker_standardized"]=='Bill Clinton')]
+Clinton96
+
+#Gore96
+Gore96 = debates_1996[(debates_1996["Speaker_standardized"]=='Al Gore')]
+Gore96
+
+#Dole96
+Dole96 = debates_1996[(debates_1996["Speaker_standardized"]=='Bob Dole')]
+Dole96
+
+#Kemp96
+Kemp96 = debates_1996[(debates_1996["Speaker_standardized"]=='Jack Kemp')]
+Kemp96
+
+#GOP1996
+GOP1996=Dole96.append([Kemp96])
+GOP1996
+
+#Dem1996
+Dem1996=Clinton96.append([Gore96])
+Dem1996
+
+#all candidates 1996
+allcandidates96 = GOP1996.append([Dem1996]) 
+allcandidates96
