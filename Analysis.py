@@ -261,7 +261,7 @@ Stockdale92 = debates_1992[(debates_1992["Speaker_standardized"]=='Adm. James St
 Stockdale92
 
 #GOP1992
-GOP1992=Bush92.append([Quayle88])
+GOP1992=Bush92.append([Quayle92])
 GOP1992
 
 #Dem1992
