@@ -2,7 +2,7 @@
 """
 @author: Lauren Neal
 Semester Project: Polisticians
-Generic WordCloud (first attempt)
+WordCloud
 """
 
 import nltk
@@ -14,17 +14,22 @@ from wordcloud import WordCloud
 from PIL import Image
 
 # read csv in
-with open('Transcripts_final.csv', encoding = "utf-8") as f:
+with open('debate_test.txt', encoding = "utf-8") as f:
     raw = f.read()
 
 # separate all language into 'tokens' (break up string into words and punctuation)    
 tokens = word_tokenize(raw)
-
+tokens = [word.lower() for word in tokens]
 # create NLTK text out of 'tokens' (allows us to perform all NLTK functions)
 transcripts_all = nltk.Text(tokens)
 
+# remove punctuation
+import string
+table = str.maketrans('', '', string.punctuation)
+stripped = [w.translate(table) for w in transcripts_all]
+
 # list of all words (no punctuation, no numbers)
-word_list = list(word.lower() for word in transcripts_all if word.isalpha)
+word_list = list(word for word in stripped if word.isalpha)
 
 #word_tokenize accepts a string as an input, not a file. 
 stop_words = set(stopwords.words('english'))
@@ -36,7 +41,14 @@ def listToString(list):
     wordstring = " "
     return (wordstring.join(list))
 
-word_string = listToString(word_list)
+# count word frequency
+wordfreq = [words_list.count(w) for w in words_list]
+
+# create dictionary of [words:counts]
+zip_iterator = zip(words_list, wordfreq)
+d = dict(zip_iterator)    
+
+word_string = listToString(words_list)
        
 def plot_cloud(wordcloud):
     # Set figure size
@@ -46,19 +58,18 @@ def plot_cloud(wordcloud):
     # No axis details
     plt.axis("off");
 
-
-
 wordcloud = WordCloud(width = 3000, height = 2000, random_state=1, 
                        background_color='salmon', colormap='Pastel1', 
-                       collocations=False).generate(word_string)
+                       collocations=False).generate_from_frequencies(d)
 
+plot_cloud(wordcloud)
 
-# Import image to np.array
-mask = np.array(Image.open('obama_mask.png'))
+# # Import image to np.array
+# mask = np.array(Image.open('obama_mask.png'))
 
-wordcloud2 = WordCloud(width = 3000, height = 2000, random_state=1, 
-                       background_color='white', colormap='Greys', 
-                       collocations=False, mask=mask).generate(word_string)
-# Plot
-plot_cloud(wordcloud2)
-wordcloud2.to_file("wordcloud-obama.png")
+# wordcloud2 = WordCloud(width = 3000, height = 2000, random_state=1, 
+#                        background_color='white', colormap='Greys', 
+#                        collocations=False, mask=mask).generate(word_string)
+# # Plot
+# plot_cloud(wordcloud2)
+# wordcloud2.to_file("wordcloud-obama.png")
