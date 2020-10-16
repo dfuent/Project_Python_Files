@@ -261,7 +261,7 @@ Stockdale92 = debates_1992[(debates_1992["Speaker_standardized"]=='Adm. James St
 Stockdale92
 
 #GOP1992
-GOP1992=Bush92.append([Quayle88])
+GOP1992=Bush92.append([Quayle92])
 GOP1992
 
 #Dem1992
@@ -276,4 +276,299 @@ Ind1992
 #all candidates 1992
 allcandidates92 = GOP1992.append([Dem1992, Ind1992]) 
 allcandidates92
+
+#begin 1996 debates
+#Oct 6, 1996
+Oct6_1996_debate = df[df["Debate"]=='October 6, 1996 Debate Transcript']
+Oct6_1996_debate
+
+#Oct 16, 1996
+Oct16_1996_debate = df[df["Debate"]=='October 16, 1996 Debate Transcript']
+Oct16_1996_debate
+
+#Oct 9, 1996
+Oct9_1996_debate = df[df["Debate"]=='October 9, 1996 Debate Transcript']
+Oct9_1996_debate
+
+#full debate transcript 1996, includes moderators and any other speakes in addition to candidates
+debates_1996 = Oct9_1996_debate.append([Oct6_1996_debate, Oct16_1996_debate])
+debates_1996
+
+#Clinton96
+Clinton96 = debates_1996[(debates_1996["Speaker_standardized"]=='Bill Clinton')]
+Clinton96
+
+#Gore96
+Gore96 = debates_1996[(debates_1996["Speaker_standardized"]=='Al Gore')]
+Gore96
+
+#Dole96
+Dole96 = debates_1996[(debates_1996["Speaker_standardized"]=='Bob Dole')]
+Dole96
+
+#Kemp96
+Kemp96 = debates_1996[(debates_1996["Speaker_standardized"]=='Jack Kemp')]
+Kemp96
+
+#GOP1996
+GOP1996=Dole96.append([Kemp96])
+GOP1996
+
+#Dem1996
+Dem1996=Clinton96.append([Gore96])
+Dem1996
+
+#all candidates 1996
+allcandidates96 = GOP1996.append([Dem1996]) 
+allcandidates96
+
+#Begin 2000
+#October 5, 2000
+Oct5_2000_debate = df[df["Debate"]=='October 5, 2000 Debate Transcript']
+Oct5_2000_debate
+
+#October 17, 2000
+Oct17_2000_debate = df[df["Debate"]=='October 17, 2000 Debate Transcript']
+Oct17_2000_debate
+
+#October 3, 2000
+Oct3_2000_debate = df[df["Debate"]=='October 3, 2000 Transcript']
+Oct3_2000_debate
+
+#October 11, 2000
+Oct11_2000_debate = df[df["Debate"]=='October 11, 2000 Debate Transcript']
+Oct11_2000_debate
+
+#full debate transcript 2000, includes moderators and any other speakes in addition to candidates
+debates_2000 = Oct5_2000_debate.append([Oct17_2000_debate, Oct3_2000_debate, Oct11_2000_debate])
+debates_2000
+
+#Gore2000
+Gore00 = debates_2000[(debates_2000["Speaker_standardized"]=='Al Gore')]
+Gore00
+
+#Lieberman2000
+Lieberman00 = debates_2000[(debates_2000["Speaker_standardized"]=='Joseph Lieberman')]
+Lieberman00
+
+#Bush2000
+Bush00 = debates_2000[(debates_2000["Speaker_standardized"]=='George W. Bush')]
+Bush00
+
+#Cheney2000
+Cheney00 = debates_2000[(debates_2000["Speaker_standardized"]=='Dick Cheney')]
+Cheney00
+
+#GOP2000
+GOP2000=Bush00.append([Cheney00])
+GOP2000
+
+#Dem2000
+Dem2000=Gore00.append([Lieberman00])
+Dem2000
+
+#all candidates 2000
+allcandidates00 = GOP2000.append([Dem2000]) 
+allcandidates00
+
+#Begin 2004
+#October 8, 2004
+Oct8_2004_debate = df[df["Debate"]=='October 8, 2004 Debate Transcript']
+Oct8_2004_debate
+
+#September 30, 2004
+Sept30_2004_debate = df[df["Debate"]=='September 30. 2004 Debate Transcript']
+Sept30_2004_debate
+
+#October 5, 2004
+Oct5_2004_debate = df[df["Debate"]=='October 5, 2004 Transcript']
+Oct5_2004_debate
+
+#October 13, 2004
+Oct13_2004_debate = df[df["Debate"]=='October 13, 2004 Debate Transcript']
+Oct13_2004_debate
+
+#full debate transcript 2004, includes moderators and any other speakes in addition to candidates
+debates_2004 = Oct8_2004_debate.append([Sept30_2004_debate, Oct5_2004_debate, Oct13_2004_debate])
+debates_2004
+
+#Bush2004
+Bush04 = debates_2004[(debates_2004["Speaker_standardized"]=='George W. Bush')]
+Bush04
+
+#Cheney2004
+Cheney04 = debates_2004[(debates_2004["Speaker_standardized"]=='Dick Cheney')]
+Cheney04
+
+#Kerry2004
+Kerry04 = debates_2004[(debates_2004["Speaker_standardized"]=='John Kerry')]
+Kerry04
+
+#Bush2004
+Bush04 = debates_2004[(debates_2004["Speaker_standardized"]=='George W. Bush')]
+Bush04
+
+#Edwards2004
+Edwards04 = debates_2004[(debates_2004["Speaker_standardized"]=='John Edwards')]
+Edwards04
+
+#GOP2004
+GOP2004=Bush04.append([Cheney04])
+GOP2004
+
+#Dem2004
+Dem2004=Kerry04.append([Edwards04])
+Dem2004
+
+#all candidates 2004
+allcandidates04 = GOP2004.append([Dem2004]) 
+allcandidates04
+
+#Begin 2008
+#October 15, 2008
+Oct15_2008_debate = df[df["Debate"]=='October 15, 2008 Debate Transcript']
+Oct15_2008_debate
+
+#October 2, 2008
+Oct2_2008_debate = df[df["Debate"]=='October 2, 2008 Debate Transcript']
+Oct2_2008_debate
+
+#Septmber 26, 2008
+Sept26_2008_debate = df[df["Debate"]=='September 26, 2008 Debate Transcript']
+Sept26_2008_debate
+
+#October 7, 2008
+Oct7_2008_debate = df[df["Debate"]=='October 7, 2008 Debate Transcript']
+Oct7_2008_debate
+
+#full debate transcript 2008, includes moderators and any other speakes in addition to candidates
+debates_2008 = Oct15_2008_debate.append([Oct2_2008_debate, Sept26_2008_debate, Oct7_2008_debate])
+debates_2008
+
+#McCain2008
+McCain08 = debates_2008[(debates_2008["Speaker_standardized"]=='John McCain')]
+McCain08
+
+#Palin2008
+Palin08 = debates_2008[(debates_2008["Speaker_standardized"]=='Sarah Palin')]
+Palin08
+
+#Obama2008
+Obama08 = debates_2008[(debates_2008["Speaker_standardized"]=='Barack Obama')]
+Obama08
+
+#Biden2008
+Biden08 = debates_2008[(debates_2008["Speaker_standardized"]=='Joe Biden')]
+Biden08
+
+#GOP2008
+GOP2008=McCain08.append([Palin08])
+GOP2008
+
+#Dem2008
+
+Dem2008=Obama08.append([Biden08])
+Dem2008
+
+#allcandidates2008
+allcandidates08 = GOP2008.append([Dem2008]) 
+allcandidates08
+
+#Begin 2012
+#October 16, 2012
+Oct16_2012_debate = df[df["Debate"]=='October 16, 2012 Debate Transcript']
+Oct16_2012_debate
+
+#October 3, 2012
+Oct3_2012_debate = df[df["Debate"]=='October 3, 2012 Debate Transcript']
+Oct3_2012_debate
+
+#October 22, 2012
+Oct22_2012_debate = df[df["Debate"]=='October 22, 2012 Debate Transcript']
+Oct22_2012_debate
+
+#October 11, 2012
+Oct11_2012_debate = df[df["Debate"]=='October 11, 2012 Debate Transcript']
+Oct11_2012_debate
+
+#full debate transcript 2012, includes moderators and any other speakes in addition to candidates
+debates_2012 = Oct16_2012_debate.append([Oct3_2012_debate, Oct22_2012_debate, Oct11_2012_debate])
+debates_2012
+
+#Obama2012
+Obama12 = debates_2012[(debates_2012["Speaker_standardized"]=='Barack Obama')]
+Obama12
+
+#Biden2012
+Biden12 = debates_2012[(debates_2012["Speaker_standardized"]=='Joe Biden')]
+Biden12
+
+#Romney2012
+Romney12 = debates_2012[(debates_2012["Speaker_standardized"]=='Mitt Romney')]
+Romney12
+
+#Ryan2012
+Ryan12 = debates_2012[(debates_2012["Speaker_standardized"]=='Paul Ryan')]
+Ryan12
+
+#GOP2012
+GOP2012=Romney12.append([Ryan12])
+GOP2012
+
+#Dem2012
+Dem2012=Obama12.append([Biden12])
+Dem2012
+
+#all candidates 2012
+allcandidates12 = GOP2012.append([Dem2012]) 
+allcandidates12
+
+#Begin2016
+#October 4, 2016
+Oct4_2016_debate = df[df["Debate"]=='October 4, 2016 Debate Transcript']
+Oct4_2016_debate
+
+#September 26, 2016
+Sept26_2016_debate = df[df["Debate"]=='September 26, 2016 Debate Transcript']
+Sept26_2016_debate
+
+#October 19, 2016
+Oct19_2016_debate = df[df["Debate"]=='October 19, 2016 Debate Transcript']
+Oct19_2016_debate
+
+#October 9, 2016
+Oct9_2016_debate = df[df["Debate"]=='October 9, 2016 Debate Transcript']
+Oct9_2016_debate
+
+#full debate transcript 2016, includes moderators and any other speakes in addition to candidates
+debates_2016 = Oct4_2016_debate.append([Sept26_2016_debate, Oct19_2016_debate, Oct9_2016_debate])
+debates_2016
+
+#Trump2016
+Trump16 = debates_2016[(debates_2016["Speaker_standardized"]=='Donald Trump')]
+Trump16
+
+#Pence16
+Pence16 = debates_2016[(debates_2016["Speaker_standardized"]=='Mike Pence')]
+Pence16
+
+#Hillary Clinton16 --labled as Bill in data
+Clinton16 = debates_2016[(debates_2016["Speaker_standardized"]=='Bill Clinton')]
+Clinton16
+
+#Kaine16
+Kaine16 = debates_2016[(debates_2016["Speaker_standardized"]=='Tim Kaine')]
+Kaine16
+
+#GOP 2016
+GOP2016 = Trump16.append([Pence16]) 
+GOP2016
+
+#Dem 2016
+Dem2016 = Clinton16.append([Kaine16]) 
+Dem2016
+
+#allcandidates 2016
+allcandidates16 = GOP2016.append([Dem2016]) 
+allcandidates16
 
