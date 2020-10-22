@@ -572,3 +572,23 @@ Dem2016
 allcandidates16 = GOP2016.append([Dem2016]) 
 allcandidates16
 
+tdf['Jobs Count'] = tdf['Transcript'].str.count('jobs')
+tdf['Economy Count'] = tdf.Transcript.str.count('economy')
+tdf['Growth Count'] = tdf.Transcript.str.count('growth') # modify these to include capital as well
+tdf['Terrorist Count'] = tdf.Transcript.str.count('terrorist')
+
+tdf['AfterComma'] = tdf['Debate'].str.split(',').str[1]
+tdf['AfterComma'] = tdf['AfterComma'].str.lstrip()
+# print(AfterComma)
+tdf['Year'] = tdf['AfterComma'].str[:4].fillna(0).astype(int)
+# print(Year)
+
+# tdf.to_csv('econanalysis.csv')
+
+jobsPivot = tdf.pivot_table(index = ['Year'], values = ['Jobs Count'], aggfunc = 'sum')
+macro_df = pd.read_csv('US_economic_data_annual.csv')
+new_tdf = pd.merge(jobsPivot,macro_df,on='Year',how='right')
+new_tdf.to_csv('econanalysis.csv')
+
+terroristPivot = tdf.pivot_table(index = ['Year'], values = ['Terrorist Count'], aggfunc = 'sum')
+# print(terroristPivot)
