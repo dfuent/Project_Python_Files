@@ -39,7 +39,6 @@ print(df.columns)
 
 df['Speaker_Clean'] = df.apply(speaker_map, axis = 1)
 
-
 l = ['MR. ', 'MRS.', 'MS.']
 
 for i in l:
@@ -63,6 +62,7 @@ print(df.dtypes)
 pd.Series(df['Speaker_fin'].unique()).to_csv('speakers.csv')
 
 speaker_map = pd.read_csv('speaker_map.csv')
+clean_map = pd.read_csv('map_file_final.csv')
 
 print(speaker_map.head())
 print(speaker_map.dtypes)
@@ -71,8 +71,16 @@ print(speaker_map.dtypes)
 
 df = df.join(speaker_map.set_index('Speaker_fin'), rsuffix='_map', on = 'Speaker_fin')
 
-#df.drop(columns=['0'])
+print(df.columns)
 
-#df = df.merge(speaker_map,  on='Speaker_fin', suffixes=('','_map'))
+df['Debate_date'] = df['Debate'].str.replace('Debate', '').str.strip().str.replace('Transcripts', '').str.replace('Transcript', '').str.strip().str.replace('First Half', '').str.strip().str.replace('Second Half', '').str.strip()
 
-df.to_csv('Transcripts_final.csv')
+df['Key'] = df['Debate_date'] + ' | ' + df['Speaker_standardized']
+
+df = df.join(clean_map.set_index('Key'), rsuffix='_map', on = 'Key')
+
+df.drop(['Speaker_fin', '0'], axis = 1, inplace = True)
+
+df['Transcript'] = df['Transcript'].str.upper()
+
+df.to_csv('Transcripts_clean.csv')
