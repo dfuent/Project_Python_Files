@@ -59,6 +59,10 @@ Kennedydf # the copyright information gets attributed to Kennedy
 debates_1960= Nixondf.append(Kennedydf)
 debates_1960
 
+#top 200 words
+allcandidates60_freq = pd.Series(' '.join(debates_1960.Transcript).split()).value_counts()[:200]
+allcandidates60_freq
+
 #Begin 1976
 #September 23, 1976 debate
 Sept23_1976_debate = df[df["Debate"]=='September 23, 1976 Debate Transcript']
@@ -88,6 +92,10 @@ Carter76 # includes (barely audible) in Carter word count
 #both candidates/parties 1976 (without moderator/others)
 allcandidates76 = Ford76.append([Carter76])
 allcandidates76
+
+#top 200 words
+allcandidates76_freq= pd.Series(' '.join(allcandidates76.Transcript).split()).value_counts()[:200]
+allcandidates76_freq
 
 #Begin 1980 debates
 #October 28, 1980
@@ -161,6 +169,10 @@ GOP1984
 
 allcandidates84 = GOP1984.append([Dem1984]) 
 allcandidates84
+
+#top 200 words
+allcandidates84_freq= pd.Series(' '.join(allcandidates84.Transcript).split()).value_counts()[:200]
+allcandidates84_freq
 
 #Begin 1988 debates
 #October 5, 1988
@@ -322,6 +334,10 @@ Dem1996
 allcandidates96 = GOP1996.append([Dem1996]) 
 allcandidates96
 
+#top 200 words
+allcandidates96_freq= pd.Series(' '.join(allcandidates96.Transcript).split()).value_counts()[:200]
+allcandidates96_freq
+
 #Begin 2000
 #October 5, 2000
 Oct5_2000_debate = df[df["Debate"]=='October 5, 2000 Debate Transcript']
@@ -370,6 +386,10 @@ Dem2000
 #all candidates 2000
 allcandidates00 = GOP2000.append([Dem2000]) 
 allcandidates00
+
+#top 200 words
+allcandidates00_freq= pd.Series(' '.join(allcandidates00.Transcript).split()).value_counts()[:200]
+allcandidates00_freq
 
 #Begin 2004
 #October 8, 2004
@@ -424,6 +444,10 @@ Dem2004
 allcandidates04 = GOP2004.append([Dem2004]) 
 allcandidates04
 
+#top 200 words
+allcandidates04_freq= pd.Series(' '.join(allcandidates04.Transcript).split()).value_counts()[:200]
+allcandidates04_freq
+
 #Begin 2008
 #October 15, 2008
 Oct15_2008_debate = df[df["Debate"]=='October 15, 2008 Debate Transcript']
@@ -474,6 +498,10 @@ Dem2008
 allcandidates08 = GOP2008.append([Dem2008]) 
 allcandidates08
 
+#top 200 words
+allcandidates08_freq= pd.Series(' '.join(allcandidates08.Transcript).split()).value_counts()[:200]
+allcandidates08_freq
+
 #Begin 2012
 #October 16, 2012
 Oct16_2012_debate = df[df["Debate"]=='October 16, 2012 Debate Transcript']
@@ -523,6 +551,10 @@ Dem2012
 allcandidates12 = GOP2012.append([Dem2012]) 
 allcandidates12
 
+#top 200 words
+allcandidates12_freq= pd.Series(' '.join(allcandidates12.Transcript).split()).value_counts()[:200]
+allcandidates12_freq
+
 #Begin2016
 #October 4, 2016
 Oct4_2016_debate = df[df["Debate"]=='October 4, 2016 Debate Transcript']
@@ -571,6 +603,10 @@ Dem2016
 #allcandidates 2016
 allcandidates16 = GOP2016.append([Dem2016]) 
 allcandidates16
+
+#top 200 words
+allcandidates16_freq= pd.Series(' '.join(allcandidates16.Transcript).split()).value_counts()[:200]
+allcandidates16_freq
 
 tdf['Jobs Count'] = tdf['Transcript'].str.count('jobs')
 tdf['Economy Count'] = tdf.Transcript.str.count('economy')
