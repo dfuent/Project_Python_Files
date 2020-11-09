@@ -568,23 +568,23 @@ debates_84_Russia.sum()
 
 #analysis of words by party
 
-GOP84_nuclear = GOP84.Transcript.str.count('NUCLEAR')
-GOP84_nuclear.sum()
+GOP1984_nuclear = GOP1984.Transcript.str.count('NUCLEAR')
+GOP1984_nuclear.sum()
 
-DEM1984_nuclear = DEM1984.Transcript.str.count('NUCLEAR')
-DEM1984_nuclear.sum()
+Dem1984_nuclear = Dem1984.Transcript.str.count('NUCLEAR')
+Dem1984_nuclear.sum()
 
-GOP84_atomic = GOP84.Transcript.str.count('ATOMIC')
-GOP84_atomic.sum()
+GOP1984_atomic = GOP1984.Transcript.str.count('ATOMIC')
+GOP1984_atomic.sum()
 
-DEM1984_atomic = DEM1984.Transcript.str.count('ATOMIC')
-DEM1984_atomic.sum()
+Dem1984_atomic = Dem1984.Transcript.str.count('ATOMIC')
+Dem1984_atomic.sum()
 
-GOP84_proliferation = GOP84.Transcript.str.count('PROLIFERATION')
-GOP84_proliferation.sum()
+GOP1984_proliferation = GOP1984.Transcript.str.count('PROLIFERATION')
+GOP1984_proliferation.sum()
 
-DEM1984_proliferation = DEM1984.Transcript.str.count('PROLIFERATION')
-DEM1984_proliferation.sum()
+Dem1984_proliferation = Dem1984.Transcript.str.count('PROLIFERATION')
+Dem1984_proliferation.sum()
 
 GOP1984_nonproliferation = GOP1984.Transcript.str.count('NONPROLIFERATION')
 GOP1984_nonproliferation.sum()
@@ -592,53 +592,53 @@ GOP1984_nonproliferation.sum()
 DEM1984_nonproliferation = DEM1984.Transcript.str.count('NONPROLIFERATION')
 DEM1984_nonproliferation.sum()
 
-GOP84_non_proliferation = GOP84.Transcript.str.count('NON-PROLIFERATION')
-GOP84_non_proliferation.sum()
+GOP1984_non_proliferation = GOP1984.Transcript.str.count('NON-PROLIFERATION')
+GOP1984_non_proliferation.sum()
 
-DEM1984_non_proliferation = DEM1984.Transcript.str.count('NON-PROLIFERATION')
-DEM1984_non_proliferation.sum()
+Dem1984_non_proliferation = Dem1984.Transcript.str.count('NON-PROLIFERATION')
+Dem1984_non_proliferation.sum()
 
-GOP84_armsrace = GOP84.Transcript.str.count('ARMS RACE')
-GOP84_armsrace.sum()
+GOP1984_armsrace = GOP1984.Transcript.str.count('ARMS RACE')
+GOP1984_armsrace.sum()
 
-DEM1984_armsrace = DEM1984.Transcript.str.count('ARMS RACE')
-DEM1984_armsrace.sum()
+Dem1984_armsrace = Dem1984.Transcript.str.count('ARMS RACE')
+Dem1984_armsrace.sum()
 
-GOP84_women = GOP84.Transcript.str.count('WOMEN')
-GOP84_women.sum()
+GOP1984_women = GOP1984.Transcript.str.count('WOMEN')
+GOP1984_women.sum()
 
-DEM1984_women = DEM8194.Transcript.str.count('WOMEN')
-DEM1984_women.sum()
+Dem1984_women = Dem8194.Transcript.str.count('WOMEN')
+Dem1984_women.sum()
 
-GOP84_job = GOP84.Transcript.str.count('JOB')
-GOP84_job.sum()
+GOP1984_job = GOP1984.Transcript.str.count('JOB')
+GOP1984_job.sum()
 
-DEM1984_job = DEM1984.Transcript.str.count('JOB')
-DEM1984_job.sum()
+Dem1984_job = Dem1984.Transcript.str.count('JOB')
+Dem1984_job.sum()
 
-GOP84_jobs = GOP84.Transcript.str.count('JOBS')
-GOP84_jobs.sum()
+GOP1984_jobs = GOP1984.Transcript.str.count('JOBS')
+GOP1984_jobs.sum()
 
-DEM1984_jobs = DEM1984.Transcript.str.count('JOBS')
-DEM1984_jobs.sum()
+Dem1984_jobs = Dem1984.Transcript.str.count('JOBS')
+Dem1984_jobs.sum()
 
-GOP84_unemployment = GOP84.Transcript.str.count('UNEMPLOYMENT')
-GOP84_unemployment.sum()
+GOP1984_unemployment = GOP1984.Transcript.str.count('UNEMPLOYMENT')
+GOP1984_unemployment.sum()
 
-DEM1984_unemployment = DEM1984.Transcript.str.count('UNEMPLOYMENT')
-DEM1984_unemployment.sum()
+Dem1984_unemployment = Dem1984.Transcript.str.count('UNEMPLOYMENT')
+Dem1984_unemployment.sum()
 
-GOP84_world = GOP84.Transcript.str.count('WORLD')
-GOP84_world.sum()
+GOP1984_world = GOP1984.Transcript.str.count('WORLD')
+GOP1984_world.sum()
 
-DEM1984_world = DEM1984.Transcript.str.count('WORLD')
-DEM1984_world.sum()
+Dem1984_world = Dem1984.Transcript.str.count('WORLD')
+Dem1984_world.sum()
 
-GOP84_foreign = GOP84.Transcript.str.count('FOREIGN')
-GOP84_foreign.sum()
+GOP1984_foreign = GOP1984.Transcript.str.count('FOREIGN')
+GOP1984_foreign.sum()
 
-DEM1984_foreign = DEM1984.Transcript.str.count('FOREIGN')
-DEM1984_foreign.sum()
+Dem1984_foreign = Dem1984.Transcript.str.count('FOREIGN')
+Dem1984_foreign.sum()
 
 
 
@@ -978,74 +978,74 @@ debates_1996_Russia.sum()
 GOP1996_nuclear = GOP1996.Transcript.str.count('NUCLEAR')
 GOP1996_nuclear.sum()
 
-DEM1996_nuclear = DEM1996.Transcript.str.count('NUCLEAR')
-DEM1996_nuclear.sum()
+Dem1996_nuclear = Dem1996.Transcript.str.count('NUCLEAR')
+Dem1996_nuclear.sum()
 
 GOP1996_atomic = GOP1996.Transcript.str.count('ATOMIC')
 GOP1996_atomic.sum()
 
-DEM1996_atomic = DEM1996.Transcript.str.count('ATOMIC')
-DEM1996_atomic.sum()
+Dem1996_atomic = Dem1996.Transcript.str.count('ATOMIC')
+Dem1996_atomic.sum()
 
 GOP1996_proliferation = GOP1996.Transcript.str.count('PROLIFERATION')
 GOP1996_proliferation.sum()
 
-DEM1996_proliferation = DEM1996.Transcript.str.count('PROLIFERATION')
-DEM1996_proliferation.sum()
+Dem1996_proliferation = Dem1996.Transcript.str.count('PROLIFERATION')
+Dem1996_proliferation.sum()
 
 GOP1996_nonproliferation = GOP1996.Transcript.str.count('NONPROLIFERATION')
 GOP1996_nonproliferation.sum()
 
-DEM1996_nonproliferation = DEM1996.Transcript.str.count('NONPROLIFERATION')
-DEM1996_nonproliferation.sum()
+Dem1996_nonproliferation = Dem1996.Transcript.str.count('NONPROLIFERATION')
+Dem1996_nonproliferation.sum()
 
 GOP1996_non_proliferation = GOP1996.Transcript.str.count('NON-PROLIFERATION')
 GOP1996_non_proliferation.sum()
 
-DEM1996_non_proliferation = DEM1996.Transcript.str.count('NON-PROLIFERATION')
-DEM1996_non_proliferation.sum()
+Dem1996_non_proliferation = Dem1996.Transcript.str.count('NON-PROLIFERATION')
+Dem1996_non_proliferation.sum()
 
 GOP1996_armsrace = GOP1996.Transcript.str.count('ARMS RACE')
 GO19P96_armsrace.sum()
 
-DEM1996_armsrace = DEM1996.Transcript.str.count('ARMS RACE')
-DEM1996_armsrace.sum()
+Dem1996_armsrace = Dem1996.Transcript.str.count('ARMS RACE')
+Dem1996_armsrace.sum()
 
 GOP1996_women = GOP1996.Transcript.str.count('WOMEN')
 GOP1996_women.sum()
 
-DEM1996_women = DEM1996.Transcript.str.count('WOMEN')
-DEM1996_women.sum()
+Dem1996_women = Dem1996.Transcript.str.count('WOMEN')
+Dem1996_women.sum()
 
 GOP1996_job = GOP1996.Transcript.str.count('JOB')
 GOP1996_job.sum()
 
-DEM1996_job = DEM1996.Transcript.str.count('JOB')
-DEM1996_job.sum()
+Dem1996_job = Dem1996.Transcript.str.count('JOB')
+Dem1996_job.sum()
 
 GOP1996_jobs = GOP1996.Transcript.str.count('JOBS')
 GOP1996_jobs.sum()
 
-DEM1996_jobs = DEM1996.Transcript.str.count('JOBS')
-DEM1996_jobs.sum()
+Dem1996_jobs = Dem1996.Transcript.str.count('JOBS')
+Dem1996_jobs.sum()
 
 GOP1996_unemployment = GOP1996.Transcript.str.count('UNEMPLOYMENT')
 GOP1996_unemployment.sum()
 
-DEM1996_unemployment = DEM1996.Transcript.str.count('UNEMPLOYMENT')
-DEM1996_unemployment.sum()
+Dem1996_unemployment = Dem1996.Transcript.str.count('UNEMPLOYMENT')
+Dem1996_unemployment.sum()
 
 GOP1996_world = GOP1996.Transcript.str.count('WORLD')
 GOP1996_world.sum()
 
-DEM1996_world = DEM1996.Transcript.str.count('WORLD')
-DEM1996_world.sum()
+Dem1996_world = Dem1996.Transcript.str.count('WORLD')
+Dem1996_world.sum()
 
 GOP1996_foreign = GOP1996.Transcript.str.count('FOREIGN')
 GOP1996_foreign.sum()
 
-DEM1996_foreign = DEM1996.Transcript.str.count('FOREIGN')
-DEM1996_foreign.sum()
+Dem1996_foreign = Dem1996.Transcript.str.count('FOREIGN')
+Dem1996_foreign.sum()
 
 
 #Begin 2000
@@ -1191,74 +1191,74 @@ debates_2000_Russia.sum()
 GOP2000_nuclear = GOP2000.Transcript.str.count('NUCLEAR')
 GOP2000_nuclear.sum()
 
-DEM2000_nuclear = DEM2000.Transcript.str.count('NUCLEAR')
-DEM2000_nuclear.sum()
+Dem2000_nuclear = Dem2000.Transcript.str.count('NUCLEAR')
+Dem2000_nuclear.sum()
 
 GOP2000_atomic = GOP2000.Transcript.str.count('ATOMIC')
 GOP2000_atomic.sum()
 
-DEM2000_atomic = DEM2000.Transcript.str.count('ATOMIC')
-DEM2000_atomic.sum()
+Dem2000_atomic = Dem2000.Transcript.str.count('ATOMIC')
+Dem2000_atomic.sum()
 
 GOP2000_proliferation = GOP2000.Transcript.str.count('PROLIFERATION')
 GOP2000_proliferation.sum()
 
-DEM2000_proliferation = DEM2000.Transcript.str.count('PROLIFERATION')
-DEM2000_proliferation.sum()
+Dem2000_proliferation = Dem2000.Transcript.str.count('PROLIFERATION')
+Dem2000_proliferation.sum()
 
 GOP2000_nonproliferation = GOP2000.Transcript.str.count('NONPROLIFERATION')
 GOP2000_nonproliferation.sum()
 
-DEM2000_nonproliferation = DEM2000.Transcript.str.count('NONPROLIFERATION')
-DEM2000_nonproliferation.sum()
+Dem2000_nonproliferation = Dem2000.Transcript.str.count('NONPROLIFERATION')
+Dem2000_nonproliferation.sum()
 
 GOP2000_non_proliferation = GOP2000.Transcript.str.count('NON-PROLIFERATION')
 GOP2000_non_proliferation.sum()
 
-DEM2000_non_proliferation = DEM2000.Transcript.str.count('NON-PROLIFERATION')
-DEM2000_non_proliferation.sum()
+Dem2000_non_proliferation = Dem2000.Transcript.str.count('NON-PROLIFERATION')
+Dem2000_non_proliferation.sum()
 
 GOP2000_armsrace = GOP2000.Transcript.str.count('ARMS RACE')
 GOP2000_armsrace.sum()
 
-DEM00_armsrace = DEM00.Transcript.str.count('ARMS RACE')
-DEM00_armsrace.sum()
+Dem2000_armsrace = DEM2000.Transcript.str.count('ARMS RACE')
+Dem2000_armsrace.sum()
 
 GOP00_women = GOP00.Transcript.str.count('WOMEN')
 GOP00_women.sum()
 
-DEM2000_women = DEM2000.Transcript.str.count('WOMEN')
-DEM2000_women.sum()
+Dem2000_women = Dem2000.Transcript.str.count('WOMEN')
+Dem2000_women.sum()
 
 GOP2000_job = GOP2000.Transcript.str.count('JOB')
 GOP2000_job.sum()
 
-DEM2000_job = DEM2000.Transcript.str.count('JOB')
-DEM2000_job.sum()
+Dem2000_job = Dem2000.Transcript.str.count('JOB')
+Dem2000_job.sum()
 
 GOP2000_jobs = GOP2000.Transcript.str.count('JOBS')
 GOP2000_jobs.sum()
 
-DEM2000_jobs = DEM2000.Transcript.str.count('JOBS')
-DEM2000_jobs.sum()
+Dem2000_jobs = Dem2000.Transcript.str.count('JOBS')
+Dem2000_jobs.sum()
 
 GOP2000_unemployment = GOP2000.Transcript.str.count('UNEMPLOYMENT')
 GOP2000_unemployment.sum()
 
-DEM2000_unemployment = DEM2000.Transcript.str.count('UNEMPLOYMENT')
-DEM2000_unemployment.sum()
+Dem2000_unemployment = Dem2000.Transcript.str.count('UNEMPLOYMENT')
+Dem2000_unemployment.sum()
 
 GOP2000_world = GOP2000.Transcript.str.count('WORLD')
 GOP2000_world.sum()
 
-DEM2000_world = DEM2000.Transcript.str.count('WORLD')
-DEM2000_world.sum()
+Dem2000_world = Dem2000.Transcript.str.count('WORLD')
+Dem2000_world.sum()
 
 GOP2000_foreign = GOP2000.Transcript.str.count('FOREIGN')
 GOP2000_foreign.sum()
 
-DEM2000_foreign = DEM2000.Transcript.str.count('FOREIGN')
-DEM2000_foreign.sum()
+Dem2000_foreign = Dem2000.Transcript.str.count('FOREIGN')
+Dem2000_foreign.sum()
 
 #Begin 2004
 #October 8, 2004
