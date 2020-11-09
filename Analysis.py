@@ -385,6 +385,7 @@ Anderson80
 allcandidates80 = Anderson80.append([Reagan80, Carter80]) 
 allcandidates80
 
+
 #Begin 1984 debates
 #October 7, 1984
 Oct7_1984_debate = df[df["Debate"]=='October 7, 1984 Debate Transcript']
@@ -432,6 +433,130 @@ allcandidates84
 #top 200 words
 allcandidates84_freq= pd.Series(' '.join(allcandidates84.Transcript).split()).value_counts()[:200]
 allcandidates84_freq
+
+#analysis of particular words used by candidates overall in 1984
+debates_84_nuclear = debates_1984.Transcript.str.count('NUCLEAR')
+debates_84_nuclear.sum()	
+
+debates_84_atomic = debates_1984.Transcript.str.count('ATOMIC')
+debates_84_atomic.sum()	
+
+debates_84_proliferation = debates_1984.Transcript.str.count('PROLIFERATION')
+debates_84_proliferation.sum()
+	
+debates_84_nonproliferation = debates_1984.Transcript.str.count('NONPROLIFERATION')
+debates_84_nonproliferation.sum()
+	
+debates_84_non_proliferation = debates_1984.Transcript.str.count('NON-PROLIFERATION')
+debates_84_non_proliferation.sum()
+	
+debates_84_armsrace = debates_1984.Transcript.str.count('ARMS RACE')
+debates_84_armsrace.sum()
+	
+debates_84_women = debates_1984.Transcript.str.count('WOMEN')
+debates_84_women.sum()	
+
+debates_84_job = debates_1984.Transcript.str.count('JOB')
+debates_84_job.sum()	
+
+debates_84_jobs = debates_1984.Transcript.str.count('JOBS')
+debates_84_jobs.sum()	
+
+debates_84_unemployment = debates_1984.Transcript.str.count('UNEMPLOYMENT')
+debates_84_unemployment.sum()	
+
+debates_84_world = debates_1984.Transcript.str.count('WORLD')
+debates_84_world.sum()	
+
+debates_84_foreign = debates_1984.Transcript.str.count('FOREIGN')
+debates_84_foreign.sum()	
+
+debates_84_Iraq = debates_1984.Transcript.str.count('IRAQ')
+debates_84_Iraq.sum()	
+
+debates_84_Soviet= debates_1984.Transcript.str.count('SOVIET')
+debates_84_Soviet.sum()	
+
+debates_84_Soviets= debates_1984.Transcript.str.count('SOVIETS')
+debates_84_Soviets.sum()	
+
+debates_84_Russia= debates_1984.Transcript.str.count('RUSSIA')
+debates_84_Russia.sum()
+
+#analysis of words by party
+
+GOP84_nuclear = GOP84.Transcript.str.count('NUCLEAR')
+GOP84_nuclear.sum()
+
+DEM84_nuclear = DEM84.Transcript.str.count('NUCLEAR')
+DEM84_nuclear.sum()
+
+GOP84_atomic = GOP84.Transcript.str.count('ATOMIC')
+GOP84_atomic.sum()
+
+DEM84_atomic = DEM84.Transcript.str.count('ATOMIC')
+DEM84_atomic.sum()
+
+GOP84_proliferation = GOP84.Transcript.str.count('PROLIFERATION')
+GOP84_proliferation.sum()
+
+DEM84_proliferation = DEM84.Transcript.str.count('PROLIFERATION')
+DEM84_proliferation.sum()
+
+GOP84_nonproliferation = GOP84.Transcript.str.count('NONPROLIFERATION')
+GOP84_nonproliferation.sum()
+
+DEM84_nonproliferation = DEM84.Transcript.str.count('NONPROLIFERATION')
+DEM84_nonproliferation.sum()
+
+GOP84_non_proliferation = GOP84.Transcript.str.count('NON-PROLIFERATION')
+GOP84_non_proliferation.sum()
+
+DEM84_non_proliferation = DEM84.Transcript.str.count('NON-PROLIFERATION')
+DEM84_non_proliferation.sum()
+
+GOP84_armsrace = GOP84.Transcript.str.count('ARMS RACE')
+GOP84_armsrace.sum()
+
+DEM84_armsrace = DEM84.Transcript.str.count('ARMS RACE')
+DEM84_armsrace.sum()
+
+GOP84_women = GOP84.Transcript.str.count('WOMEN')
+GOP84_women.sum()
+
+DEM84_women = DEM84.Transcript.str.count('WOMEN')
+DEM84_women.sum()
+
+GOP84_job = GOP84.Transcript.str.count('JOB')
+GOP84_job.sum()
+
+DEM84_job = DEM84.Transcript.str.count('JOB')
+DEM84_job.sum()
+
+GOP84_jobs = GOP84.Transcript.str.count('JOBS')
+GOP84_jobs.sum()
+
+DEM84_jobs = DEM84.Transcript.str.count('JOBS')
+DEM84_jobs.sum()
+
+GOP84_unemployment = GOP84.Transcript.str.count('UNEMPLOYMENT')
+GOP84_unemployment.sum()
+
+DEM84_unemployment = DEM84.Transcript.str.count('UNEMPLOYMENT')
+DEM84_unemployment.sum()
+
+GOP84_world = GOP84.Transcript.str.count('WORLD')
+GOP84_world.sum()
+
+DEM84_world = DEM84.Transcript.str.count('WORLD')
+DEM84_world.sum()
+
+GOP84_foreign = GOP84.Transcript.str.count('FOREIGN')
+GOP84_foreign.sum()
+
+DEM84_foreign = DEM84.Transcript.str.count('FOREIGN')
+DEM84_foreign.sum()
+
 
 
 #Begin 1988 debates
