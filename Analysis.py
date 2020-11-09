@@ -1272,49 +1272,85 @@ len(Oct8_2004_debate)
 Sept30_2004_debate = df[df["Debate"]=='September 30. 2004 Debate Transcript']
 Sept30_2004_debate
 
+#testing length
+len(Sept30_2004_debate)
+
 #October 5, 2004
 Oct5_2004_debate = df[df["Debate"]=='October 5, 2004 Transcript']
 Oct5_2004_debate
+
+#testing length
+len(Oct5_2004_debate)
 
 #October 13, 2004
 Oct13_2004_debate = df[df["Debate"]=='October 13, 2004 Debate Transcript']
 Oct13_2004_debate
 
+#testing length
+len(Oct13_2004_debate)
+
 #full debate transcript 2004, includes moderators and any other speakes in addition to candidates
 debates_2004 = Oct8_2004_debate.append([Sept30_2004_debate, Oct5_2004_debate, Oct13_2004_debate])
 debates_2004
 
+#testing length
+len(debates_2004)
+
 #Bush2004
 Bush04 = debates_2004[(debates_2004["Speaker_standardized"]=='George W. Bush')]
 Bush04
+
+#testing length
+len(Bush04)
 
 #Cheney2004
 Cheney04 = debates_2004[(debates_2004["Speaker_standardized"]=='Dick Cheney')]
 Cheney04
 
+#testing length
+len(Cheney04)
+
 #Kerry2004
 Kerry04 = debates_2004[(debates_2004["Speaker_standardized"]=='John Kerry')]
 Kerry04
+
+#testing length
+len(Kerry04)
 
 #Bush2004
 Bush04 = debates_2004[(debates_2004["Speaker_standardized"]=='George W. Bush')]
 Bush04
 
+#testing length
+len(Bush04)
+
 #Edwards2004
 Edwards04 = debates_2004[(debates_2004["Speaker_standardized"]=='John Edwards')]
 Edwards04
+
+#testing length
+len(Edwards04)
 
 #GOP2004
 GOP2004=Bush04.append([Cheney04])
 GOP2004
 
+#testing length
+len(GOP2004)
+
 #Dem2004
 Dem2004=Kerry04.append([Edwards04])
 Dem2004
 
+#testing length
+len(Dem2004)
+
 #all candidates 2004
 allcandidates04 = GOP2004.append([Dem2004]) 
 allcandidates04
+
+#testing length
+len(allcandidates04)
 
 #top 200 words
 allcandidates04_freq= pd.Series(' '.join(allcandidates04.Transcript).split()).value_counts()[:200]
@@ -1371,127 +1407,163 @@ debates_2004_Russia.sum()
 
 #analysis of words by party
 
-GOP04_nuclear = GOP04.Transcript.str.count('NUCLEAR')
-GOP04_nuclear.sum()
+GOP2004_nuclear = GOP2004.Transcript.str.count('NUCLEAR')
+GOP2004_nuclear.sum()
 
-DEM04_nuclear = DEM04.Transcript.str.count('NUCLEAR')
-DEM04_nuclear.sum()
+Dem2004_nuclear = Dem2004.Transcript.str.count('NUCLEAR')
+Dem2004_nuclear.sum()
 
-GOP04_atomic = GOP04.Transcript.str.count('ATOMIC')
-GOP04_atomic.sum()
+GOP2004_atomic = GOP2004.Transcript.str.count('ATOMIC')
+GOP2004_atomic.sum()
 
-DEM04_atomic = DEM04.Transcript.str.count('ATOMIC')
-DEM04_atomic.sum()
+Dem2004_atomic = Dem2004.Transcript.str.count('ATOMIC')
+Dem2004_atomic.sum()
 
-GOP04_proliferation = GOP04.Transcript.str.count('PROLIFERATION')
-GOP04_proliferation.sum()
+GOP2004_proliferation = GOP2004.Transcript.str.count('PROLIFERATION')
+GOP2004_proliferation.sum()
 
-DEM04_proliferation = DEM04.Transcript.str.count('PROLIFERATION')
-DEM04_proliferation.sum()
+Dem2004_proliferation = Dem2004.Transcript.str.count('PROLIFERATION')
+Dem2004_proliferation.sum()
 
-GOP04_nonproliferation = GOP04.Transcript.str.count('NONPROLIFERATION')
-GOP04_nonproliferation.sum()
+GOP2004_nonproliferation = GOP2004.Transcript.str.count('NONPROLIFERATION')
+GOP2004_nonproliferation.sum()
 
-DEM04_nonproliferation = DEM04.Transcript.str.count('NONPROLIFERATION')
-DEM04_nonproliferation.sum()
+Dem2004_nonproliferation = Dem2004.Transcript.str.count('NONPROLIFERATION')
+Dem2004_nonproliferation.sum()
 
-GOP04_non_proliferation = GOP04.Transcript.str.count('NON-PROLIFERATION')
-GOP04_non_proliferation.sum()
+GOP2004_non_proliferation = GOP2004.Transcript.str.count('NON-PROLIFERATION')
+GOP2004_non_proliferation.sum()
 
-DEM04_non_proliferation = DEM04.Transcript.str.count('NON-PROLIFERATION')
-DEM04_non_proliferation.sum()
+Dem2004_non_proliferation = Dem2004.Transcript.str.count('NON-PROLIFERATION')
+Dem2004_non_proliferation.sum()
 
-GOP04_armsrace = GOP04.Transcript.str.count('ARMS RACE')
-GOP04_armsrace.sum()
+GOP2004_armsrace = GOP2004.Transcript.str.count('ARMS RACE')
+GOP2004_armsrace.sum()
 
-DEM04_armsrace = DEM04.Transcript.str.count('ARMS RACE')
-DEM04_armsrace.sum()
+Dem2004_armsrace = Dem2004.Transcript.str.count('ARMS RACE')
+Dem2004_armsrace.sum()
 
-GOP04_women = GOP04.Transcript.str.count('WOMEN')
-GOP04_women.sum()
+GOP2004_women = GOP2004.Transcript.str.count('WOMEN')
+GOP2004_women.sum()
 
-DEM04_women = DEM04.Transcript.str.count('WOMEN')
-DEM04_women.sum()
+Dem2004_women = Dem2004.Transcript.str.count('WOMEN')
+Dem2004_women.sum()
 
-GOP04_job = GOP04.Transcript.str.count('JOB')
-GOP04_job.sum()
+GOP2004_job = GOP2004.Transcript.str.count('JOB')
+GOP2004_job.sum()
 
-DEM04_job = DEM04.Transcript.str.count('JOB')
-DEM04_job.sum()
+Dem2004_job = Dem2004.Transcript.str.count('JOB')
+Dem2004_job.sum()
 
-GOP04_jobs = GOP04.Transcript.str.count('JOBS')
-GOP04_jobs.sum()
+GOP2004_jobs = GOP2004.Transcript.str.count('JOBS')
+GOP2004_jobs.sum()
 
-DEM04_jobs = DEM04.Transcript.str.count('JOBS')
-DEM04_jobs.sum()
+Dem2004_jobs = Dem2004.Transcript.str.count('JOBS')
+Dem2004_jobs.sum()
 
-GOP04_unemployment = GOP04.Transcript.str.count('UNEMPLOYMENT')
-GOP04_unemployment.sum()
+GOP2004_unemployment = GOP2004.Transcript.str.count('UNEMPLOYMENT')
+GOP2004_unemployment.sum()
 
-DEM04_unemployment = DEM04.Transcript.str.count('UNEMPLOYMENT')
-DEM04_unemployment.sum()
+Dem2004_unemployment = Dem2004.Transcript.str.count('UNEMPLOYMENT')
+Dem2004_unemployment.sum()
 
-GOP04_world = GOP04.Transcript.str.count('WORLD')
-GOP04_world.sum()
+GOP2004_world = GOP2004.Transcript.str.count('WORLD')
+GOP2004_world.sum()
 
-DEM04_world = DEM04.Transcript.str.count('WORLD')
-DEM04_world.sum()
+Dem2004_world = Dem204.Transcript.str.count('WORLD')
+Dem2004_world.sum()
 
-GOP04_foreign = GOP04.Transcript.str.count('FOREIGN')
-GOP04_foreign.sum()
+GOP2004_foreign = GOP2004.Transcript.str.count('FOREIGN')
+GOP2004_foreign.sum()
 
-DEM04_foreign = DEM04.Transcript.str.count('FOREIGN')
-DEM04_foreign.sum()
+Dem2004_foreign = Dem2004.Transcript.str.count('FOREIGN')
+Dem2004_foreign.sum()
 
 #Begin 2008
 #October 15, 2008
 Oct15_2008_debate = df[df["Debate"]=='October 15, 2008 Debate Transcript']
 Oct15_2008_debate
 
+#testing length
+len(Oct15_2008_debate)
+
 #October 2, 2008
 Oct2_2008_debate = df[df["Debate"]=='October 2, 2008 Debate Transcript']
 Oct2_2008_debate
+
+#testing length
+len(Oct2_2008_debate)
 
 #Septmber 26, 2008
 Sept26_2008_debate = df[df["Debate"]=='September 26, 2008 Debate Transcript']
 Sept26_2008_debate
 
+#testing length
+len(Sept26_2008_debate)
+
 #October 7, 2008
 Oct7_2008_debate = df[df["Debate"]=='October 7, 2008 Debate Transcript']
 Oct7_2008_debate
+
+#testing length
+len(Oct7_2008_debate)
 
 #full debate transcript 2008, includes moderators and any other speakes in addition to candidates
 debates_2008 = Oct15_2008_debate.append([Oct2_2008_debate, Sept26_2008_debate, Oct7_2008_debate])
 debates_2008
 
+#testing length
+len(debates2008)
+
 #McCain2008
 McCain08 = debates_2008[(debates_2008["Speaker_standardized"]=='John McCain')]
 McCain08
+
+#testing length
+len(McCain08)
 
 #Palin2008
 Palin08 = debates_2008[(debates_2008["Speaker_standardized"]=='Sarah Palin')]
 Palin08
 
+#testing length
+len(Palin08)
+
 #Obama2008
 Obama08 = debates_2008[(debates_2008["Speaker_standardized"]=='Barack Obama')]
 Obama08
+
+#testing length
+len(Obama08)
 
 #Biden2008
 Biden08 = debates_2008[(debates_2008["Speaker_standardized"]=='Joe Biden')]
 Biden08
 
+#testing length
+len(Biden08)
+
 #GOP2008
 GOP2008=McCain08.append([Palin08])
 GOP2008
+
+#testing length
+len(GOP2008)
 
 #Dem2008
 
 Dem2008=Obama08.append([Biden08])
 Dem2008
 
+#testing length
+len(Dem2008)
+
 #allcandidates2008
 allcandidates08 = GOP2008.append([Dem2008]) 
 allcandidates08
+
+#testing length 
+len(allcandidates08)
 
 #top 200 words
 allcandidates08_freq= pd.Series(' '.join(allcandidates08.Transcript).split()).value_counts()[:200]
@@ -1548,77 +1620,77 @@ debates_2008_Russia.sum()
 
 #analysis of words by party
 
-GOP08_nuclear = GOP08.Transcript.str.count('NUCLEAR')
-GOP08_nuclear.sum()
+GOP2008_nuclear = GOP2008.Transcript.str.count('NUCLEAR')
+GOP2008_nuclear.sum()
 
-DEM08_nuclear = DEM08.Transcript.str.count('NUCLEAR')
-DEM08_nuclear.sum()
+Dem2008_nuclear = Dem2008.Transcript.str.count('NUCLEAR')
+Dem2008_nuclear.sum()
 
-GOP08_atomic = GOP08.Transcript.str.count('ATOMIC')
-GOP08_atomic.sum()
+GOP2008_atomic = GOP2008.Transcript.str.count('ATOMIC')
+GOP2008_atomic.sum()
 
-DEM08_atomic = DEM08.Transcript.str.count('ATOMIC')
-DEM08_atomic.sum()
+Dem2008_atomic = Dem2008.Transcript.str.count('ATOMIC')
+Dem2008_atomic.sum()
 
-GOP08_proliferation = GOP08.Transcript.str.count('PROLIFERATION')
-GOP08_proliferation.sum()
+GOP2008_proliferation = GOP2008.Transcript.str.count('PROLIFERATION')
+GOP2008_proliferation.sum()
 
-DEM08_proliferation = DEM08.Transcript.str.count('PROLIFERATION')
-DEM08_proliferation.sum()
+Dem2008_proliferation = Dem2008.Transcript.str.count('PROLIFERATION')
+Dem2008_proliferation.sum()
 
-GOP08_nonproliferation = GOP08.Transcript.str.count('NONPROLIFERATION')
-GOP08_nonproliferation.sum()
+GOP2008_nonproliferation = GOP2008.Transcript.str.count('NONPROLIFERATION')
+GOP2008_nonproliferation.sum()
 
-DEM08_nonproliferation = DEM08.Transcript.str.count('NONPROLIFERATION')
-DEM08_nonproliferation.sum()
+Dem2008_nonproliferation = Dem2008.Transcript.str.count('NONPROLIFERATION')
+Dem2008_nonproliferation.sum()
 
-GOP08_non_proliferation = GOP08.Transcript.str.count('NON-PROLIFERATION')
-GOP08_non_proliferation.sum()
+GOP2008_non_proliferation = GOP2008.Transcript.str.count('NON-PROLIFERATION')
+GOP2008_non_proliferation.sum()
 
-DEM08_non_proliferation = DEM08.Transcript.str.count('NON-PROLIFERATION')
-DEM08_non_proliferation.sum()
+DEM2008_non_proliferation = Dem2008.Transcript.str.count('NON-PROLIFERATION')
+DEM2008_non_proliferation.sum()
 
-GOP08_armsrace = GOP08.Transcript.str.count('ARMS RACE')
-GOP08_armsrace.sum()
+GOP2008_armsrace = GOP2008.Transcript.str.count('ARMS RACE')
+GOP2008_armsrace.sum()
 
-DEM08_armsrace = DEM08.Transcript.str.count('ARMS RACE')
-DEM08_armsrace.sum()
+Dem2008_armsrace = Dem2008.Transcript.str.count('ARMS RACE')
+Dem2008_armsrace.sum()
 
-GOP08_women = GOP08.Transcript.str.count('WOMEN')
-GOP08_women.sum()
+GOP2008_women = GOP2008.Transcript.str.count('WOMEN')
+GOP2008_women.sum()
 
-DEM08_women = DEM08.Transcript.str.count('WOMEN')
-DEM08_women.sum()
+Dem2008_women = Dem2008.Transcript.str.count('WOMEN')
+Dem2008_women.sum()
 
-GOP08_job = GOP08.Transcript.str.count('JOB')
-GOP08_job.sum()
+GOP2008_job = GOP2008.Transcript.str.count('JOB')
+GOP2008_job.sum()
 
-DEM08_job = DEM08.Transcript.str.count('JOB')
-DEM08_job.sum()
+Dem2008_job = Dem2008.Transcript.str.count('JOB')
+Dem2008_job.sum()
 
-GOP08_jobs = GOP08.Transcript.str.count('JOBS')
-GOP08_jobs.sum()
+GOP2008_jobs = GOP2008.Transcript.str.count('JOBS')
+GOP2008_jobs.sum()
 
-DEM08_jobs = DEM08.Transcript.str.count('JOBS')
-DEM08_jobs.sum()
+Dem2008_jobs = Dem2008.Transcript.str.count('JOBS')
+Dem2008_jobs.sum()
 
-GOP08_unemployment = GOP08.Transcript.str.count('UNEMPLOYMENT')
-GOP08_unemployment.sum()
+GOP2008_unemployment = GOP2008.Transcript.str.count('UNEMPLOYMENT')
+GOP2008_unemployment.sum()
 
-DEM08_unemployment = DEM08.Transcript.str.count('UNEMPLOYMENT')
-DEM08_unemployment.sum()
+Dem2008_unemployment = Dem2008.Transcript.str.count('UNEMPLOYMENT')
+Dem2008_unemployment.sum()
 
-GOP08_world = GOP08.Transcript.str.count('WORLD')
-GOP08_world.sum()
+GOP2008_world = GOP2008.Transcript.str.count('WORLD')
+GOP2008_world.sum()
 
-DEM08_world = DEM08.Transcript.str.count('WORLD')
-DEM08_world.sum()
+Dem2008_world = Dem2008.Transcript.str.count('WORLD')
+Dem2008_world.sum()
 
-GOP08_foreign = GOP08.Transcript.str.count('FOREIGN')
-GOP08_foreign.sum()
+GOP2008_foreign = GOP2008.Transcript.str.count('FOREIGN')
+GOP2008_foreign.sum()
 
-DEM08_foreign = DEM08.Transcript.str.count('FOREIGN')
-DEM08_foreign.sum()
+Dem2008_foreign = Dem2008.Transcript.str.count('FOREIGN')
+Dem2008_foreign.sum()
 
 #Begin 2012
 #October 16, 2012
