@@ -647,160 +647,277 @@ DEM1984_foreign.sum()
 Oct5_1988_debate = df[df["Debate"]=='October 5, 1988 Debate Transcripts']
 Oct5_1988_debate
 
+#testing length
+len(Oct5_1988_debate)
+
 #September 25, 1988 debate
 Sept25_1988_debate = df[df["Debate"]=='September 25, 1988 Debate Transcript']
 Sept25_1988_debate
+
+#testing length
+len(Sept25_1988_debate)
 
 #October 13, 1988
 Oct13_1988_debate = df[df["Debate"]=='October 13, 1988 Debate Transcript']
 Oct13_1988_debate
 
+#testing length
+len(Oct13_1988_debate)
+
 #full debate transcript 1988, includes moderators and any other speakes in addition to candidates
 debates_1988 = Oct13_1988_debate.append([Sept25_1988_debate, Oct5_1988_debate])
 debates_1988
+
+#testing length
+len(debates_1988)
 
 #Bush 1988
 Bush88 = debates_1988[(debates_1988["Speaker_standardized"]=='George W. Bush')]
 Bush88
 
+#testing length
+len(Bush88)
+
 #Quayle 1988
 Quayle88 = debates_1988[(debates_1988["Speaker_standardized"]=='Dan Quayle')]
 Quayle88
+
+#testing length
+len(Quayle88)
 
 #Dukakis 1988
 Dukakis88 = debates_1988[(debates_1988["Speaker_standardized"]=='Michael Dukakis')]
 Dukakis88
 
+#testing length
+len(Dukakis88)
+
 #Bentsen 1988
 Bentsen88 = debates_1988[(debates_1988["Speaker_standardized"]=='Lloyd Bentsen')]
 Bentsen88
+
+#testing length
+len(Bentsen88)
 
 #GOP 1988
 GOP1988 = Bush88.append([Quayle88]) 
 GOP1988
 
+#testing length
+len(GOP1988)
+
 #Dem 1988
 Dem1988 = Dukakis88.append([Bentsen88]) 
 Dem1988
 
+#testing length
+len(Dem1988)
+
 #allcandidates 1988
 allcandidates88 = GOP1988.append([Dem1988]) 
 allcandidates88
+
+#testing length
+len(allcandidates88)
 
 #Begin 1992
 #Oct 15, 1992 second half
 Oct15_1992_2ndhalf_debate = df[df["Debate"]=='October 15, 1992 Second Half Debate Transcript']
 Oct15_1992_2ndhalf_debate
 
+#testing length
+len(Oct15_1992_2ndhalf_debate)
+
 #Oct 15 first half, 1992 debate
 Oct15_1992_1sthalf_debate = df[df["Debate"]=='October 15, 1992 First Half Debate Transcript']
 Oct15_1992_1sthalf_debate
+
+#testing length
+len(Oct15_1992_1sthalf_debate)
 
 #October 19, 1992
 Oct19_1992_debate = df[df["Debate"]=='October 19, 1992 Debate Transcript']
 Oct19_1992_debate
 
+#testing length
+len(Oct19_1992_debate)
+
 #October 11, 1992 first half
 Oct11_1992_1sthalf_debate = df[df["Debate"]=='October 11, 1992 First Half Debate Transcript']
 Oct11_1992_1sthalf_debate
+
+#testing length
+len(Oct11_1992_1sthalf_debate)
 
 #October 11, 1992 second half 
 Oct11_1992_2ndhalf_debate = df[df["Debate"]=='October 11, 1992 Second Half Debate Transcript']
 Oct11_1992_2ndhalf_debate
 
+#testing length
+len(Oct11_1992_2ndhalf_debate)
+
 #October 13, 1992
 Oct13_1992_debate = df[df["Debate"]=='October 13, 1992 Debate Transcript']
 Oct13_1992_debate
+
+#testing length
+len(Oct13_1992_debate)
 
 #full debate transcript 1992, includes moderators and any other speakes in addition to candidates
 debates_1992 = Oct13_1992_debate.append([Oct15_1992_1sthalf_debate, Oct15_1992_2ndhalf_debate, Oct11_1992_1sthalf_debate, Oct11_1992_2ndhalf_debate, Oct19_1992_debate])
 debates_1992
 
+#testing length
+len(debates_1992)
+
 #Bush1992
 Bush92 = debates_1992[(debates_1992["Speaker_standardized"]=='George W. Bush')]
 Bush92
+
+#testing length
+len(Bush92)
 
 #Quayle1992
 Quayle92 = debates_1992[(debates_1992["Speaker_standardized"]=='Dan Quayle')]
 Quayle92
 
+#testing length
+len(Quayle92)
+
 #Clinton1992
 Clinton92 = debates_1992[(debates_1992["Speaker_standardized"]=='Bill Clinton')]
 Clinton92
+
+#testing length
+len(Clinton92)
 
 #Gore1992
 Gore92 = debates_1992[(debates_1992["Speaker_standardized"]=='Al Gore')]
 Gore92
 
+#testing length
+len(Gore92)
+
 #Perot1992
 Perot92 = debates_1992[(debates_1992["Speaker_standardized"]=='Ross Perot')]
 Perot92
+
+#testing length
+len(Perot92)
 
 #Stockdale1992
 Stockdale92 = debates_1992[(debates_1992["Speaker_standardized"]=='Adm. James Stockdale')]
 Stockdale92
 
+#testing length
+len(Stockdale92)
+
 #GOP1992
 GOP1992=Bush92.append([Quayle92])
 GOP1992
+
+#testing length
+len(GOP1992)
 
 #Dem1992
 
 Dem1992=Clinton92.append([Gore92])
 Dem1992
 
+#testing length
+len(Dem1992)
+
 #Ind1992
 Ind1992=Perot92.append([Stockdale92])
 Ind1992
 
+#testing length
+len(Ind1992)
+
 #all candidates 1992
 allcandidates92 = GOP1992.append([Dem1992, Ind1992]) 
 allcandidates92
+
+#testing length
+len(allcandidates92)
 
 #begin 1996 debates
 #Oct 6, 1996
 Oct6_1996_debate = df[df["Debate"]=='October 6, 1996 Debate Transcript']
 Oct6_1996_debate
 
+#testing length
+len(Oct6_1996_debate)
+
 #Oct 16, 1996
 Oct16_1996_debate = df[df["Debate"]=='October 16, 1996 Debate Transcript']
 Oct16_1996_debate
+
+#testing length
+len(Oct16_1996_debate)
 
 #Oct 9, 1996
 Oct9_1996_debate = df[df["Debate"]=='October 9, 1996 Debate Transcript']
 Oct9_1996_debate
 
+#testing length
+len(Oct9_1996_debate)
+
 #full debate transcript 1996, includes moderators and any other speakes in addition to candidates
 debates_1996 = Oct9_1996_debate.append([Oct6_1996_debate, Oct16_1996_debate])
 debates_1996
+
+#testing length
+len(debates_1996)
 
 #Clinton96
 Clinton96 = debates_1996[(debates_1996["Speaker_standardized"]=='Bill Clinton')]
 Clinton96
 
+#testing length
+len(Clinton96)
+
 #Gore96
 Gore96 = debates_1996[(debates_1996["Speaker_standardized"]=='Al Gore')]
 Gore96
+
+#testing length
+len(Gore96)
 
 #Dole96
 Dole96 = debates_1996[(debates_1996["Speaker_standardized"]=='Bob Dole')]
 Dole96
 
+#testing length
+len(Dole96)
+
 #Kemp96
 Kemp96 = debates_1996[(debates_1996["Speaker_standardized"]=='Jack Kemp')]
 Kemp96
+
+#testing length
+len(Kemp96)
 
 #GOP1996
 GOP1996=Dole96.append([Kemp96])
 GOP1996
 
+#testing length
+len(GOP1996)
+
 #Dem1996
 Dem1996=Clinton96.append([Gore96])
 Dem1996
 
+#testing length
+len(Dem1996)
+
 #all candidates 1996
 allcandidates96 = GOP1996.append([Dem1996]) 
 allcandidates96
+
+#testing length
+len(allcandidates06)
 
 #top 200 words
 allcandidates96_freq= pd.Series(' '.join(allcandidates96.Transcript).split()).value_counts()[:200]
@@ -858,77 +975,77 @@ debates_1996_Russia.sum()
 
 #analysis of words by party
 
-GOP96_nuclear = GOP96.Transcript.str.count('NUCLEAR')
-GOP96_nuclear.sum()
+GOP1996_nuclear = GOP1996.Transcript.str.count('NUCLEAR')
+GOP1996_nuclear.sum()
 
-DEM96_nuclear = DEM96.Transcript.str.count('NUCLEAR')
-DEM96_nuclear.sum()
+DEM1996_nuclear = DEM1996.Transcript.str.count('NUCLEAR')
+DEM1996_nuclear.sum()
 
-GOP96_atomic = GOP96.Transcript.str.count('ATOMIC')
-GOP96_atomic.sum()
+GOP1996_atomic = GOP1996.Transcript.str.count('ATOMIC')
+GOP1996_atomic.sum()
 
-DEM96_atomic = DEM96.Transcript.str.count('ATOMIC')
-DEM96_atomic.sum()
+DEM1996_atomic = DEM1996.Transcript.str.count('ATOMIC')
+DEM1996_atomic.sum()
 
-GOP96_proliferation = GOP96.Transcript.str.count('PROLIFERATION')
-GOP96_proliferation.sum()
+GOP1996_proliferation = GOP1996.Transcript.str.count('PROLIFERATION')
+GOP1996_proliferation.sum()
 
-DEM96_proliferation = DEM96.Transcript.str.count('PROLIFERATION')
-DEM96_proliferation.sum()
+DEM1996_proliferation = DEM1996.Transcript.str.count('PROLIFERATION')
+DEM1996_proliferation.sum()
 
-GOP96_nonproliferation = GOP96.Transcript.str.count('NONPROLIFERATION')
-GOP96_nonproliferation.sum()
+GOP1996_nonproliferation = GOP1996.Transcript.str.count('NONPROLIFERATION')
+GOP1996_nonproliferation.sum()
 
-DEM96_nonproliferation = DEM96.Transcript.str.count('NONPROLIFERATION')
-DEM96_nonproliferation.sum()
+DEM1996_nonproliferation = DEM1996.Transcript.str.count('NONPROLIFERATION')
+DEM1996_nonproliferation.sum()
 
-GOP96_non_proliferation = GOP96.Transcript.str.count('NON-PROLIFERATION')
-GOP96_non_proliferation.sum()
+GOP1996_non_proliferation = GOP1996.Transcript.str.count('NON-PROLIFERATION')
+GOP1996_non_proliferation.sum()
 
-DEM96_non_proliferation = DEM96.Transcript.str.count('NON-PROLIFERATION')
-DEM96_non_proliferation.sum()
+DEM1996_non_proliferation = DEM1996.Transcript.str.count('NON-PROLIFERATION')
+DEM1996_non_proliferation.sum()
 
-GOP96_armsrace = GOP96.Transcript.str.count('ARMS RACE')
-GOP96_armsrace.sum()
+GOP1996_armsrace = GOP1996.Transcript.str.count('ARMS RACE')
+GO19P96_armsrace.sum()
 
-DEM96_armsrace = DEM96.Transcript.str.count('ARMS RACE')
-DEM96_armsrace.sum()
+DEM1996_armsrace = DEM1996.Transcript.str.count('ARMS RACE')
+DEM1996_armsrace.sum()
 
-GOP96_women = GOP96.Transcript.str.count('WOMEN')
-GOP96_women.sum()
+GOP1996_women = GOP1996.Transcript.str.count('WOMEN')
+GOP1996_women.sum()
 
-DEM96_women = DEM96.Transcript.str.count('WOMEN')
-DEM96_women.sum()
+DEM1996_women = DEM1996.Transcript.str.count('WOMEN')
+DEM1996_women.sum()
 
-GOP96_job = GOP96.Transcript.str.count('JOB')
-GOP96_job.sum()
+GOP1996_job = GOP1996.Transcript.str.count('JOB')
+GOP1996_job.sum()
 
-DEM96_job = DEM96.Transcript.str.count('JOB')
-DEM96_job.sum()
+DEM1996_job = DEM1996.Transcript.str.count('JOB')
+DEM1996_job.sum()
 
-GOP96_jobs = GOP96.Transcript.str.count('JOBS')
-GOP96_jobs.sum()
+GOP1996_jobs = GOP1996.Transcript.str.count('JOBS')
+GOP1996_jobs.sum()
 
-DEM96_jobs = DEM96.Transcript.str.count('JOBS')
-DEM96_jobs.sum()
+DEM1996_jobs = DEM1996.Transcript.str.count('JOBS')
+DEM1996_jobs.sum()
 
-GOP96_unemployment = GOP96.Transcript.str.count('UNEMPLOYMENT')
-GOP96_unemployment.sum()
+GOP1996_unemployment = GOP1996.Transcript.str.count('UNEMPLOYMENT')
+GOP1996_unemployment.sum()
 
-DEM96_unemployment = DEM96.Transcript.str.count('UNEMPLOYMENT')
-DEM96_unemployment.sum()
+DEM1996_unemployment = DEM1996.Transcript.str.count('UNEMPLOYMENT')
+DEM1996_unemployment.sum()
 
-GOP96_world = GOP96.Transcript.str.count('WORLD')
-GOP96_world.sum()
+GOP1996_world = GOP1996.Transcript.str.count('WORLD')
+GOP1996_world.sum()
 
-DEM96_world = DEM96.Transcript.str.count('WORLD')
-DEM96_world.sum()
+DEM1996_world = DEM1996.Transcript.str.count('WORLD')
+DEM1996_world.sum()
 
-GOP96_foreign = GOP96.Transcript.str.count('FOREIGN')
-GOP96_foreign.sum()
+GOP1996_foreign = GOP1996.Transcript.str.count('FOREIGN')
+GOP1996_foreign.sum()
 
-DEM96_foreign = DEM96.Transcript.str.count('FOREIGN')
-DEM96_foreign.sum()
+DEM1996_foreign = DEM1996.Transcript.str.count('FOREIGN')
+DEM1996_foreign.sum()
 
 
 #Begin 2000
