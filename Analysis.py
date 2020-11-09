@@ -441,46 +441,77 @@ len(allcandidates80)
 Oct7_1984_debate = df[df["Debate"]=='October 7, 1984 Debate Transcript']
 Oct7_1984_debate
 
+#testing length
+len(Oct7_1984_debate)
+
 #October 21, 1984
 Oct21_1984_debate = df[df["Debate"]=='October 21, 1984 Debate Transcript']
 Oct21_1984_debate 
+
+#testing length
+len(Oct21_1984_debate) 
 
 #October 11, 1984 (VP debate)
 Oct11_1984_debate = df[df["Debate"]=='October 11, 1984 Debate Transcript']
 Oct11_1984_debate 
 
+#testing length
+len(Oct11_1984_debate) 
+
 #all debate transcripts 1984, includes moderator and any other speakers
 debates_1984 = Oct11_1984_debate.append([Oct21_1984_debate, Oct7_1984_debate])
 debates_1984
+
+#testing length
+len(debates_1984)
 
 #Democratic party 1984 (Mondale)
 Mondale84 = debates_1984[(debates_1984["Speaker_standardized"]=='Walter Mondale')]
 Mondale84
 
-
+#testing length
+len(Mondale84)
 
 #Dem party 1984 (Ferraro)
 Ferraro84 = debates_1984[(debates_1984["Speaker_standardized"]=='Geraldine Ferraro')]
 Ferraro84
 
+#testing length
+len(Ferraro84)
+
 #all Dem transcript 1984
 Dem1984 = Mondale84.append([Ferraro84])
 Dem1984
+
+#testing length
+len(Dem1984)
 
 #Republican party 1984 (Reagan)
 Reagan84 = debates_1984[(debates_1984["Speaker_standardized"]=='Ronald Reagan')]
 Reagan84
 
+#testing length
+len(Reagan84)
+
 #Republican party 1984 (Bush)
 Bush84 = debates_1984[(debates_1984["Speaker_standardized"]=='George W. Bush')]
 Bush84
+
+#testing length
+len(Bush84)
 
 #full Republican party 1984
 GOP1984 = Reagan84.append([Bush84])
 GOP1984
 
+#testing length
+len(GOP1984)
+
 allcandidates84 = GOP1984.append([Dem1984]) 
 allcandidates84
+
+#testing length
+len(allcandidates84)
 
 #top 200 words
 allcandidates84_freq= pd.Series(' '.join(allcandidates84.Transcript).split()).value_counts()[:200]
@@ -540,74 +571,74 @@ debates_84_Russia.sum()
 GOP84_nuclear = GOP84.Transcript.str.count('NUCLEAR')
 GOP84_nuclear.sum()
 
-DEM84_nuclear = DEM84.Transcript.str.count('NUCLEAR')
-DEM84_nuclear.sum()
+DEM1984_nuclear = DEM1984.Transcript.str.count('NUCLEAR')
+DEM1984_nuclear.sum()
 
 GOP84_atomic = GOP84.Transcript.str.count('ATOMIC')
 GOP84_atomic.sum()
 
-DEM84_atomic = DEM84.Transcript.str.count('ATOMIC')
-DEM84_atomic.sum()
+DEM1984_atomic = DEM1984.Transcript.str.count('ATOMIC')
+DEM1984_atomic.sum()
 
 GOP84_proliferation = GOP84.Transcript.str.count('PROLIFERATION')
 GOP84_proliferation.sum()
 
-DEM84_proliferation = DEM84.Transcript.str.count('PROLIFERATION')
-DEM84_proliferation.sum()
+DEM1984_proliferation = DEM1984.Transcript.str.count('PROLIFERATION')
+DEM1984_proliferation.sum()
 
-GOP84_nonproliferation = GOP84.Transcript.str.count('NONPROLIFERATION')
-GOP84_nonproliferation.sum()
+GOP1984_nonproliferation = GOP1984.Transcript.str.count('NONPROLIFERATION')
+GOP1984_nonproliferation.sum()
 
-DEM84_nonproliferation = DEM84.Transcript.str.count('NONPROLIFERATION')
-DEM84_nonproliferation.sum()
+DEM1984_nonproliferation = DEM1984.Transcript.str.count('NONPROLIFERATION')
+DEM1984_nonproliferation.sum()
 
 GOP84_non_proliferation = GOP84.Transcript.str.count('NON-PROLIFERATION')
 GOP84_non_proliferation.sum()
 
-DEM84_non_proliferation = DEM84.Transcript.str.count('NON-PROLIFERATION')
-DEM84_non_proliferation.sum()
+DEM1984_non_proliferation = DEM1984.Transcript.str.count('NON-PROLIFERATION')
+DEM1984_non_proliferation.sum()
 
 GOP84_armsrace = GOP84.Transcript.str.count('ARMS RACE')
 GOP84_armsrace.sum()
 
-DEM84_armsrace = DEM84.Transcript.str.count('ARMS RACE')
-DEM84_armsrace.sum()
+DEM1984_armsrace = DEM1984.Transcript.str.count('ARMS RACE')
+DEM1984_armsrace.sum()
 
 GOP84_women = GOP84.Transcript.str.count('WOMEN')
 GOP84_women.sum()
 
-DEM84_women = DEM84.Transcript.str.count('WOMEN')
-DEM84_women.sum()
+DEM1984_women = DEM8194.Transcript.str.count('WOMEN')
+DEM1984_women.sum()
 
 GOP84_job = GOP84.Transcript.str.count('JOB')
 GOP84_job.sum()
 
-DEM84_job = DEM84.Transcript.str.count('JOB')
-DEM84_job.sum()
+DEM1984_job = DEM1984.Transcript.str.count('JOB')
+DEM1984_job.sum()
 
 GOP84_jobs = GOP84.Transcript.str.count('JOBS')
 GOP84_jobs.sum()
 
-DEM84_jobs = DEM84.Transcript.str.count('JOBS')
-DEM84_jobs.sum()
+DEM1984_jobs = DEM1984.Transcript.str.count('JOBS')
+DEM1984_jobs.sum()
 
 GOP84_unemployment = GOP84.Transcript.str.count('UNEMPLOYMENT')
 GOP84_unemployment.sum()
 
-DEM84_unemployment = DEM84.Transcript.str.count('UNEMPLOYMENT')
-DEM84_unemployment.sum()
+DEM1984_unemployment = DEM1984.Transcript.str.count('UNEMPLOYMENT')
+DEM1984_unemployment.sum()
 
 GOP84_world = GOP84.Transcript.str.count('WORLD')
 GOP84_world.sum()
 
-DEM84_world = DEM84.Transcript.str.count('WORLD')
-DEM84_world.sum()
+DEM1984_world = DEM1984.Transcript.str.count('WORLD')
+DEM1984_world.sum()
 
 GOP84_foreign = GOP84.Transcript.str.count('FOREIGN')
 GOP84_foreign.sum()
 
-DEM84_foreign = DEM84.Transcript.str.count('FOREIGN')
-DEM84_foreign.sum()
+DEM1984_foreign = DEM1984.Transcript.str.count('FOREIGN')
+DEM1984_foreign.sum()
 
 
 
