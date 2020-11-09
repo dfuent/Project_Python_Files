@@ -1,0 +1,200 @@
+import pandas as pd
+import os
+import numpy as np
+
+df = pd.read_csv('Transcripts_1988.csv')
+
+df
+
+pd.set_option('display.max_rows', 500)
+
+overallwordcount1988 = pd.Series(' '.join(df.Transcript).split()).value_counts()[:200]
+overallwordcount1988
+
+nuclear = df.Transcript.str.count('NUCLEAR')
+nuclear.sum()
+
+atomic = df.Transcript.str.count('ATOMIC')
+atomic.sum()
+
+proliferation = df.Transcript.str.count('PROLIFERATION')
+proliferation.sum()
+
+nonproliferation = df.Transcript.str.count('NONPROLIFERATION')
+nonproliferation.sum()
+
+non_proliferation = df.Transcript.str.count('NON-PROLIFERATION')
+non_proliferation.sum()
+
+armsrace = df.Transcript.str.count('ARMS RACE') 
+armsrace.sum()
+
+women = df.Transcript.str.count('WOMEN') 
+women.sum()
+
+job = df.Transcript.str.count('JOB') 
+job.sum()
+
+jobs = df.Transcript.str.count('JOBS') 
+jobs.sum()
+
+unemployment = df.Transcript.str.count('UNEMPLOYMENT') 
+unemployment.sum()
+
+world = df.Transcript.str.count('WORLD') 
+world.sum()
+
+foreign = df.Transcript.str.count('FOREIGN') 
+foreign.sum()
+
+Iraq = df.Transcript.str.count('IRAQ') 
+Iraq.sum()
+
+Soviet = df.Transcript.str.count('SOVIET') 
+Soviet.sum()
+
+Soviets = df.Transcript.str.count('SOVIETS') 
+Soviets.sum()
+
+Russia = df.Transcript.str.count('RUSSIA') 
+Russia.sum()
+
+#Bush 1988
+Bush88 = df[df["Speaker_standardized"]=='George W. Bush']
+Bush88
+
+#length test
+len(Bush88)
+
+#Quayle 1988
+Quayle88 = df[df["Speaker_standardized"]=='Dan Quayle']
+Quayle88
+
+#length test
+len(Quayle88)
+
+#Dukakis 1988
+Dukakis88 = df[df["Speaker_standardized"]=='Michael Dukakis']
+Dukakis88
+
+#length test
+len(Dukakis88)
+
+#Bentsen 1988
+Bentsen88 = df[df["Speaker_standardized"]=='Lloyd Bentsen']
+Bentsen88
+
+#length test
+len(Bentsten88)
+
+#GOP 1988
+GOP1988 = Bush88.append([Quayle88]) 
+GOP1988
+
+#length test
+len(GOP1988)
+
+#Dem 1988
+Dem1988 = Dukakis88.append([Bentsen88]) 
+Dem1988
+
+#length test
+len(Dem1988)
+
+GOP1988_nuclear = GOP1988.Transcript.str.count('NUCLEAR')
+GOP1988_nuclear.sum()
+
+
+Dem1988_nuclear = Dem1988.Transcript.str.count('NUCLEAR')
+Dem1988_nuclear.sum()
+
+
+GOP1988_atomic = GOP1988.Transcript.str.count('ATOMIC')
+GOP1988_atomic.sum()
+
+
+Dem1988_atomic = Dem1988.Transcript.str.count('ATOMIC')
+Dem1988_atomic.sum()
+
+
+GOP1988_proliferation = GOP1988.Transcript.str.count('PROLIFERATION')
+GOP1988_proliferation.sum()
+
+
+Dem1988_proliferation = Dem1988.Transcript.str.count('PROLIFERATION')
+Dem1988_proliferation.sum()
+
+
+GOP1988_nonproliferation = GOP1988.Transcript.str.count('NONPROLIFERATION')
+GOP1988_nonproliferation.sum()
+
+
+Dem1988_nonproliferation = Dem1988.Transcript.str.count('NONPROLIFERATION')
+Dem1988_nonproliferation.sum()
+
+
+GOP1988_non_proliferation = GOP1988.Transcript.str.count('NON-PROLIFERATION')
+GOP1988_non_proliferation.sum()
+
+
+Dem1988_non_proliferation = Dem1988.Transcript.str.count('NON-PROLIFERATION')
+Dem1988_non_proliferation.sum()
+
+
+GOP1988_armsrace = GOP1988.Transcript.str.count('ARMS RACE')
+GOP1988_armsrace.sum()
+
+
+Dem1988_armsrace = Dem1988.Transcript.str.count('ARMS RACE')
+Dem1988_armsrace.sum()
+
+
+GOP1988_women = GOP1988.Transcript.str.count('WOMEN')
+GOP1988_women.sum()
+
+
+Dem1988_women = Dem1988.Transcript.str.count('WOMEN')
+Dem1988_women.sum()
+
+
+GOP1988_job = GOP1988.Transcript.str.count('JOB')
+GOP1988_job.sum()
+    
+
+Dem1988_job = Dem1988.Transcript.str.count('JOB')
+Dem1988_job.sum()
+
+
+GOP1988_jobs = GOP1988.Transcript.str.count('JOBS')
+GOP1988_jobs.sum()
+
+
+Dem1988_jobs = Dem1988.Transcript.str.count('JOBS')
+Dem1988_jobs.sum()
+
+
+GOP1988_unemployment = GOP1988.Transcript.str.count('UNEMPLOYMENT')
+GOP1988_unemployment.sum()
+
+
+Dem1988_unemployment = Dem1988.Transcript.str.count('UNEMPLOYMENT')
+Dem1988_unemployment.sum()
+
+
+
+GOP1988_world = GOP1988.Transcript.str.count('WORLD')
+GOP1988_world.sum()
+
+
+Dem1988_world = Dem1988.Transcript.str.count('WORLD')
+Dem1988_world.sum()
+
+
+GOP1988_foreign = GOP1988.Transcript.str.count('FOREIGN')
+GOP1988_foreign.sum()
+
+
+Dem1988_foreign = Dem1988.Transcript.str.count('FOREIGN')
+Dem1988_foreign.sum()
+
+
