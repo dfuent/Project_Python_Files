@@ -1909,49 +1909,85 @@ Dem2012_foreign.sum()
 Oct4_2016_debate = df[df["Debate"]=='October 4, 2016 Debate Transcript']
 Oct4_2016_debate
 
+#length test
+len(Oct4_2016_debate)
+
 #September 26, 2016
 Sept26_2016_debate = df[df["Debate"]=='September 26, 2016 Debate Transcript']
 Sept26_2016_debate
+
+#length test
+len(Sept26_2016_debate)
 
 #October 19, 2016
 Oct19_2016_debate = df[df["Debate"]=='October 19, 2016 Debate Transcript']
 Oct19_2016_debate
 
+#length test
+len(Oct19_2016_debate)
+
 #October 9, 2016
 Oct9_2016_debate = df[df["Debate"]=='October 9, 2016 Debate Transcript']
 Oct9_2016_debate
+
+#length test
+len(Oct9_2016_debate)
 
 #full debate transcript 2016, includes moderators and any other speakes in addition to candidates
 debates_2016 = Oct4_2016_debate.append([Sept26_2016_debate, Oct19_2016_debate, Oct9_2016_debate])
 debates_2016
 
+#length test
+len(debates_2016)
+
 #Trump2016
 Trump16 = debates_2016[(debates_2016["Speaker_standardized"]=='Donald Trump')]
 Trump16
+
+#length test
+len(Trump16)
 
 #Pence16
 Pence16 = debates_2016[(debates_2016["Speaker_standardized"]=='Mike Pence')]
 Pence16
 
+#length test
+len(Pence16)
+
 #Hillary Clinton16 --labled as Bill in data
 Clinton16 = debates_2016[(debates_2016["Speaker_standardized"]=='Bill Clinton')]
 Clinton16
+
+#length test
+len(Clinton16)
 
 #Kaine16
 Kaine16 = debates_2016[(debates_2016["Speaker_standardized"]=='Tim Kaine')]
 Kaine16
 
+#length test
+len(Kaine16)
+
 #GOP 2016
 GOP2016 = Trump16.append([Pence16]) 
 GOP2016
+
+#length test
+len(GOP2016)
 
 #Dem 2016
 Dem2016 = Clinton16.append([Kaine16]) 
 Dem2016
 
+#length test
+len(Dem2016)
+
 #allcandidates 2016
 allcandidates16 = GOP2016.append([Dem2016]) 
 allcandidates16
+
+#length test
+len(allcandidates16)
 
 #top 200 words
 allcandidates16_freq= pd.Series(' '.join(allcandidates16.Transcript).split()).value_counts()[:200]
@@ -2007,77 +2043,77 @@ debates_2016_Russia.sum()
 
 #analysis of words by party
 
-GOP16_nuclear = GOP16.Transcript.str.count('NUCLEAR')
-GOP16_nuclear.sum()
+GOP2016_nuclear = GOP2016.Transcript.str.count('NUCLEAR')
+GOP2016_nuclear.sum()
 
-DEM16_nuclear = DEM16.Transcript.str.count('NUCLEAR')
-DEM16_nuclear.sum()
+Dem2016_nuclear = Dem2016.Transcript.str.count('NUCLEAR')
+Dem2016_nuclear.sum()
 
-GOP16_atomic = GOP16.Transcript.str.count('ATOMIC')
-GOP16_atomic.sum()
+GOP2016_atomic = GOP2016.Transcript.str.count('ATOMIC')
+GOP2016_atomic.sum()
 
-DEM16_atomic = DEM16.Transcript.str.count('ATOMIC')
-DEM16_atomic.sum()
+Dem2016_atomic = Dem2016.Transcript.str.count('ATOMIC')
+Dem2016_atomic.sum()
 
-GOP16_proliferation = GOP16.Transcript.str.count('PROLIFERATION')
-GOP16_proliferation.sum()
+GOP2016_proliferation = GOP2016.Transcript.str.count('PROLIFERATION')
+GOP2016_proliferation.sum()
 
-DEM16_proliferation = DEM16.Transcript.str.count('PROLIFERATION')
-DEM16_proliferation.sum()
+Dem2016_proliferation = Dem2016.Transcript.str.count('PROLIFERATION')
+Dem2016_proliferation.sum()
 
-GOP16_nonproliferation = GOP16.Transcript.str.count('NONPROLIFERATION')
-GOP16_nonproliferation.sum()
+GOP2016_nonproliferation = GOP2016.Transcript.str.count('NONPROLIFERATION')
+GOP2016_nonproliferation.sum()
 
-DEM16_nonproliferation = DEM16.Transcript.str.count('NONPROLIFERATION')
-DEM16_nonproliferation.sum()
+Dem2016_nonproliferation = Dem2016.Transcript.str.count('NONPROLIFERATION')
+Dem2016_nonproliferation.sum()
 
-GOP16_non_proliferation = GOP16.Transcript.str.count('NON-PROLIFERATION')
-GOP16_non_proliferation.sum()
+GOP2016_non_proliferation = GOP2016.Transcript.str.count('NON-PROLIFERATION')
+GOP2016_non_proliferation.sum()
 
-DEM16_non_proliferation = DEM16.Transcript.str.count('NON-PROLIFERATION')
-DEM16_non_proliferation.sum()
+Dem2016_non_proliferation = Dem2016.Transcript.str.count('NON-PROLIFERATION')
+Dem2016_non_proliferation.sum()
 
-GOP16_armsrace = GOP16.Transcript.str.count('ARMS RACE')
-GOP16_armsrace.sum()
+GOP2016_armsrace = GOP2016.Transcript.str.count('ARMS RACE')
+GOP2016_armsrace.sum()
 
-DEM16_armsrace = DEM16.Transcript.str.count('ARMS RACE')
-DEM16_armsrace.sum()
+Dem2016_armsrace = Dem2016.Transcript.str.count('ARMS RACE')
+Dem2016_armsrace.sum()
 
-GOP16_women = GOP16.Transcript.str.count('WOMEN')
-GOP16_women.sum()
+GOP2016_women = GOP2016.Transcript.str.count('WOMEN')
+GOP2016_women.sum()
 
-DEM16_women = DEM16.Transcript.str.count('WOMEN')
-DEM16_women.sum()
+Dem2016_women = Dem2016.Transcript.str.count('WOMEN')
+Dem2016_women.sum()
 
-GOP16_job = GOP16.Transcript.str.count('JOB')
-GOP16_job.sum()
+GOP2016_job = GOP2016.Transcript.str.count('JOB')
+GOP2016_job.sum()
 
-DEM16_job = DEM16.Transcript.str.count('JOB')
-DEM16_job.sum()
+Dem2016_job = Dem2016.Transcript.str.count('JOB')
+Dem2016_job.sum()
 
-GOP16_jobs = GOP16.Transcript.str.count('JOBS')
-GOP16_jobs.sum()
+GOP2016_jobs = GOP2016.Transcript.str.count('JOBS')
+GOP2016_jobs.sum()
 
-DEM16_jobs = DEM16.Transcript.str.count('JOBS')
-DEM16_jobs.sum()
+Dem2016_jobs = Dem2016.Transcript.str.count('JOBS')
+Dem2016_jobs.sum()
 
-GOP16_unemployment = GOP16.Transcript.str.count('UNEMPLOYMENT')
-GOP16_unemployment.sum()
+GOP2016_unemployment = GOP2016.Transcript.str.count('UNEMPLOYMENT')
+GOP2016_unemployment.sum()
 
-DEM16_unemployment = DEM16.Transcript.str.count('UNEMPLOYMENT')
-DEM16_unemployment.sum()
+Dem2016_unemployment = Dem2016.Transcript.str.count('UNEMPLOYMENT')
+Dem2016_unemployment.sum()
 
-GOP16_world = GOP16.Transcript.str.count('WORLD')
-GOP16_world.sum()
+GOP2016_world = GOP2016.Transcript.str.count('WORLD')
+GOP2016_world.sum()
 
-DEM16_world = DEM16.Transcript.str.count('WORLD')
-DEM16_world.sum()
+Dem2016_world = Dem2016.Transcript.str.count('WORLD')
+Dem2016_world.sum()
 
-GOP16_foreign = GOP16.Transcript.str.count('FOREIGN')
-GOP16_foreign.sum()
+GOP2016_foreign = GOP2016.Transcript.str.count('FOREIGN')
+GOP2016_foreign.sum()
 
-DEM16_foreign = DEM16.Transcript.str.count('FOREIGN')
-DEM16_foreign.sum()
+Dem2016_foreign = Dem2016.Transcript.str.count('FOREIGN')
+Dem2016_foreign.sum()
 
 tdf['Jobs Count'] = tdf['Transcript'].str.count('jobs')
 tdf['Economy Count'] = tdf.Transcript.str.count('economy')
