@@ -1257,6 +1257,129 @@ allcandidates08
 #top 200 words
 allcandidates08_freq= pd.Series(' '.join(allcandidates08.Transcript).split()).value_counts()[:200]
 allcandidates08_freq
+	
+#analysis of particular words used by candidates overall in 2008
+debates_2008_nuclear = debates_2008.Transcript.str.count('NUCLEAR')
+debates_2008_nuclear.sum()	
+
+debates_2008_atomic = debates_2008.Transcript.str.count('ATOMIC')
+debates_2008_atomic.sum()	
+
+debates_2008_proliferation = debates_2008.Transcript.str.count('PROLIFERATION')
+debates_2008_proliferation.sum()	
+
+debates_2008_nonproliferation = debates_2008.Transcript.str.count('NONPROLIFERATION')
+debates_2008_nonproliferation.sum()	
+
+debates_2008_non_proliferation = debates_2008.Transcript.str.count('NON-PROLIFERATION')
+debates_2008_non_proliferation.sum()	
+
+debates_2008_armsrace = debates_2008.Transcript.str.count('ARMS RACE')
+debates_2008_armsrace.sum()	
+
+debates_2008_women = debates_2008.Transcript.str.count('WOMEN')
+debates_2008_women.sum()	
+
+debates_2008_job = debates_2008.Transcript.str.count('JOB')
+debates_2008_job.sum()	
+
+debates_2008_jobs = debates_2008.Transcript.str.count('JOBS')
+debates_2008_jobs.sum()
+	
+debates_2008_unemployment = debates_2008.Transcript.str.count('UNEMPLOYMENT')
+debates_2008_unemployment.sum()
+
+debates_2008_world = debates_2008.Transcript.str.count('WORLD')
+debates_2008_world.sum()
+	
+debates_2008_foreign = debates_2008.Transcript.str.count('FOREIGN')
+debates_2008_foreign.sum()
+	
+debates_2008_Iraq = debates_2008.Transcript.str.count('IRAQ')
+debates_2008_Iraq.sum()
+	
+debates_2008_Soviet= debates_2008.Transcript.str.count('SOVIET')
+debates_2008_Soviet.sum()
+	
+debates_2008_Soviets= debates_2008.Transcript.str.count('SOVIETS')
+debates_2008_Soviets.sum()
+	
+debates_2008_Russia= debates_2008.Transcript.str.count('RUSSIA')
+debates_2008_Russia.sum()
+
+#analysis of words by party
+
+GOP08_nuclear = GOP08.Transcript.str.count('NUCLEAR')
+GOP08_nuclear.sum()
+
+DEM08_nuclear = DEM08.Transcript.str.count('NUCLEAR')
+DEM08_nuclear.sum()
+
+GOP08_atomic = GOP08.Transcript.str.count('ATOMIC')
+GOP08_atomic.sum()
+
+DEM08_atomic = DEM08.Transcript.str.count('ATOMIC')
+DEM08_atomic.sum()
+
+GOP08_proliferation = GOP08.Transcript.str.count('PROLIFERATION')
+GOP08_proliferation.sum()
+
+DEM08_proliferation = DEM08.Transcript.str.count('PROLIFERATION')
+DEM08_proliferation.sum()
+
+GOP08_nonproliferation = GOP08.Transcript.str.count('NONPROLIFERATION')
+GOP08_nonproliferation.sum()
+
+DEM08_nonproliferation = DEM08.Transcript.str.count('NONPROLIFERATION')
+DEM08_nonproliferation.sum()
+
+GOP08_non_proliferation = GOP08.Transcript.str.count('NON-PROLIFERATION')
+GOP08_non_proliferation.sum()
+
+DEM08_non_proliferation = DEM08.Transcript.str.count('NON-PROLIFERATION')
+DEM08_non_proliferation.sum()
+
+GOP08_armsrace = GOP08.Transcript.str.count('ARMS RACE')
+GOP08_armsrace.sum()
+
+DEM08_armsrace = DEM08.Transcript.str.count('ARMS RACE')
+DEM08_armsrace.sum()
+
+GOP08_women = GOP08.Transcript.str.count('WOMEN')
+GOP08_women.sum()
+
+DEM08_women = DEM08.Transcript.str.count('WOMEN')
+DEM08_women.sum()
+
+GOP08_job = GOP08.Transcript.str.count('JOB')
+GOP08_job.sum()
+
+DEM08_job = DEM08.Transcript.str.count('JOB')
+DEM08_job.sum()
+
+GOP08_jobs = GOP08.Transcript.str.count('JOBS')
+GOP08_jobs.sum()
+
+DEM08_jobs = DEM08.Transcript.str.count('JOBS')
+DEM08_jobs.sum()
+
+GOP08_unemployment = GOP08.Transcript.str.count('UNEMPLOYMENT')
+GOP08_unemployment.sum()
+
+DEM08_unemployment = DEM08.Transcript.str.count('UNEMPLOYMENT')
+DEM08_unemployment.sum()
+
+GOP08_world = GOP08.Transcript.str.count('WORLD')
+GOP08_world.sum()
+
+DEM08_world = DEM08.Transcript.str.count('WORLD')
+DEM08_world.sum()
+
+GOP08_foreign = GOP08.Transcript.str.count('FOREIGN')
+GOP08_foreign.sum()
+
+DEM08_foreign = DEM08.Transcript.str.count('FOREIGN')
+DEM08_foreign.sum()
 
 #Begin 2012
 #October 16, 2012
