@@ -234,127 +234,127 @@ allcandidates76_freq= pd.Series(' '.join(allcandidates76.Transcript).split()).va
 allcandidates76_freq
 
 #analysis of specific words in debate year by all candidates
-debates_76_nuclear = debates_1976.Transcript.str.count('NUCLEAR')
-debates_76_nuclear.sum()
+debates_1976_nuclear = debates_1976.Transcript.str.count('NUCLEAR')
+debates_1976_nuclear.sum()
 
-debates_76_atomic = debates_1976.Transcript.str.count('ATOMIC')
-debates_76_atomic.sum()
+debates_1976_atomic = debates_1976.Transcript.str.count('ATOMIC')
+debates_1976_atomic.sum()
 	
-debates_76_proliferation = debates_1976.Transcript.str.count('PROLIFERATION')
-debates_76_proliferation.sum()
+debates_1976_proliferation = debates_1976.Transcript.str.count('PROLIFERATION')
+debates_1976_proliferation.sum()
 	
-debates_76_nonproliferation = debates_1976.Transcript.str.count('NONPROLIFERATION')
-debates_76_nonproliferation.sum()	
+debates_1976_nonproliferation = debates_1976.Transcript.str.count('NONPROLIFERATION')
+debates_1976_nonproliferation.sum()	
 
-debates_76_non_proliferation = debates_1976.Transcript.str.count('NON-PROLIFERATION')
-debates_76_non_proliferation.sum()	
+debates_1976_non_proliferation = debates_1976.Transcript.str.count('NON-PROLIFERATION')
+debates_1976_non_proliferation.sum()	
 
-debates_76_armsrace = debates_1976.Transcript.str.count('ARMS RACE')
-debates_76_armsrace.sum()
+debates_1976_armsrace = debates_1976.Transcript.str.count('ARMS RACE')
+debates_1976_armsrace.sum()
 	
-debates_76_women = debates_1976.Transcript.str.count('WOMEN')
-debates_76_women.sum()
+debates_1976_women = debates_1976.Transcript.str.count('WOMEN')
+debates_1976_women.sum()
 	
-debates_76_job = debates_1976.Transcript.str.count('JOB')
-debates_76_job.sum()	
+debates_1976_job = debates_1976.Transcript.str.count('JOB')
+debates_1976_job.sum()	
 
-debates_76_jobs = debates_1976.Transcript.str.count('JOBS')
-debates_76_jobs.sum()
+debates_1976_jobs = debates_1976.Transcript.str.count('JOBS')
+debates_1976_jobs.sum()
 	
-debates_76_unemployment = debates_1976.Transcript.str.count('UNEMPLOYMENT')
-debates_76_unemployment.sum()	
+debates_1976_unemployment = debates_1976.Transcript.str.count('UNEMPLOYMENT')
+debates_1976_unemployment.sum()	
 
-debates_76_world = debates_1976.Transcript.str.count('WORLD')
-debates_76_world.sum()
+debates_1976_world = debates_1976.Transcript.str.count('WORLD')
+debates_1976_world.sum()
 	
-debates_76_foreign = debates_1976.Transcript.str.count('FOREIGN')
-debates_76_foreign.sum()	
+debates_1976_foreign = debates_1976.Transcript.str.count('FOREIGN')
+debates_1976_foreign.sum()	
 
-debates_76_Iraq = debates_1976.Transcript.str.count('IRAQ')
-debates_76_Iraq.sum()
+debates_1976_Iraq = debates_1976.Transcript.str.count('IRAQ')
+debates_1976_Iraq.sum()
 	
-debates_76_Soviet= debates_1976.Transcript.str.count('SOVIET')
-debates_76_Soviet.sum()	
+debates_1976_Soviet= debates_1976.Transcript.str.count('SOVIET')
+debates_1976_Soviet.sum()	
 
-debates_76_Soviets= debates_1976.Transcript.str.count('SOVIETS')
-debates_76_Soviets.sum()
+debates_1976_Soviets= debates_1976.Transcript.str.count('SOVIETS')
+debates_1976_Soviets.sum()
 	
-debates_76_Russia= debates_1976.Transcript.str.count('RUSSIA')
-debates_76_Russia.sum()
+debates_1976_Russia= debates_1976.Transcript.str.count('RUSSIA')
+debates_1976_Russia.sum()
 
 #analysis of words by party
 
-GOP76_nuclear = GOP76.Transcript.str.count('NUCLEAR')
-GOP76_nuclear.sum()
+Ford76_nuclear = Ford76.Transcript.str.count('NUCLEAR')
+Ford76_nuclear.sum()
 
-DEM76_nuclear = DEM76.Transcript.str.count('NUCLEAR')
-DEM76_nuclear.sum()
+Carter76_nuclear = Carter76.Transcript.str.count('NUCLEAR')
+Carter76_nuclear.sum()
 
-GOP76_atomic = GOP76.Transcript.str.count('ATOMIC')
-GOP76_atomic.sum()
+Ford76_atomic = Ford76.Transcript.str.count('ATOMIC')
+Ford76_atomic.sum()
 
-DEM76_atomic = DEM76.Transcript.str.count('ATOMIC')
-DEM76_atomic.sum()
+Carter76_atomic = Carter76.Transcript.str.count('ATOMIC')
+Carter76_atomic.sum()
 
-GOP76_proliferation = GOP76.Transcript.str.count('PROLIFERATION')
-GOP76_proliferation.sum()
+Ford76_proliferation = Ford76.Transcript.str.count('PROLIFERATION')
+Ford76_proliferation.sum()
 
-DEM76_proliferation = DEM76.Transcript.str.count('PROLIFERATION')
-DEM76_proliferation.sum()
+Carter76_proliferation = Carter76.Transcript.str.count('PROLIFERATION')
+Carter76_proliferation.sum()
 
-GOP76_nonproliferation = GOP76.Transcript.str.count('NONPROLIFERATION')
-GOP76_nonproliferation.sum()
+Ford76_nonproliferation = Ford76.Transcript.str.count('NONPROLIFERATION')
+Ford76_nonproliferation.sum()
 
-DEM76_nonproliferation = DEM76.Transcript.str.count('NONPROLIFERATION')
-DEM76_nonproliferation.sum()
+Carter76_nonproliferation = Carter76.Transcript.str.count('NONPROLIFERATION')
+Carter76_nonproliferation.sum()
 
-GOP76_non_proliferation = GOP76.Transcript.str.count('NON-PROLIFERATION')
-GOP76_non_proliferation.sum()
+Ford76_non_proliferation = Ford76.Transcript.str.count('NON-PROLIFERATION')
+Ford76_non_proliferation.sum()
 
-DEM76_non_proliferation = DEM76.Transcript.str.count('NON-PROLIFERATION')
-DEM76_non_proliferation.sum()
+Carter76_non_proliferation = Carter76.Transcript.str.count('NON-PROLIFERATION')
+Carter76_non_proliferation.sum()
 
-GOP76_armsrace = GOP76.Transcript.str.count('ARMS RACE')
-GOP76_armsrace.sum()
+Ford76_armsrace = Ford76.Transcript.str.count('ARMS RACE')
+Ford76_armsrace.sum()
 
-DEM76_armsrace = DEM76.Transcript.str.count('ARMS RACE')
-DEM76_armsrace.sum()
+Carter76_armsrace = Carter76.Transcript.str.count('ARMS RACE')
+Carter76_armsrace.sum()
 
-GOP76_women = GOP76.Transcript.str.count('WOMEN')
-GOP76_women.sum()
+Ford76_women = Ford76.Transcript.str.count('WOMEN')
+Ford76_women.sum()
 
-DEM76_women = DEM76.Transcript.str.count('WOMEN')
-DEM76_women.sum()
+Carter76_women = Carter76.Transcript.str.count('WOMEN')
+Carter76_women.sum()
 
-GOP76_job = GOP76.Transcript.str.count('JOB')
-GOP76_job.sum()
+Ford76_job = Ford76.Transcript.str.count('JOB')
+Ford76_job.sum()
 
-DEM76_job = DEM76.Transcript.str.count('JOB')
-DEM76_job.sum()
+Carter76_job = Carter76.Transcript.str.count('JOB')
+Carter76_job.sum()
 
-GOP76_jobs = GOP76.Transcript.str.count('JOBS')
-GOP76_jobs.sum()
+Ford76_jobs = Ford76.Transcript.str.count('JOBS')
+Ford76_jobs.sum()
 
-DEM76_jobs = DEM76.Transcript.str.count('JOBS')
-DEM76_jobs.sum()
+Carter76_jobs = Carter76.Transcript.str.count('JOBS')
+Carter76_jobs.sum()
 
-GOP76_unemployment = GOP76.Transcript.str.count('UNEMPLOYMENT')
-GOP76_unemployment.sum()
+Ford76_unemployment = Ford76.Transcript.str.count('UNEMPLOYMENT')
+Ford76_unemployment.sum()
 
-DEM76_unemployment = DEM76.Transcript.str.count('UNEMPLOYMENT')
-DEM76_unemployment.sum()
+Carter76_unemployment = Carter76.Transcript.str.count('UNEMPLOYMENT')
+Carter76_unemployment.sum()
 
-GOP76_world = GOP76.Transcript.str.count('WORLD')
-GOP76_world.sum()
+Ford76_world = Ford76.Transcript.str.count('WORLD')
+Ford76_world.sum()
 
-DEM76_world = DEM76.Transcript.str.count('WORLD')
-DEM76_world.sum()
+Carter76_world = Carter76.Transcript.str.count('WORLD')
+Carter76_world.sum()
 
-GOP76_foreign = GOP76.Transcript.str.count('FOREIGN')
-GOP76_foreign.sum()
+Ford76_foreign = Ford76.Transcript.str.count('FOREIGN')
+Ford76_foreign.sum()
 
-DEM76_foreign = DEM76.Transcript.str.count('FOREIGN')
-DEM76_foreign.sum()
+Carter76_foreign = Carter76.Transcript.str.count('FOREIGN')
+Carter76_foreign.sum()
 
 #Begin 1980 debates
 #October 28, 1980
@@ -432,6 +432,7 @@ allcandidates84
 #top 200 words
 allcandidates84_freq= pd.Series(' '.join(allcandidates84.Transcript).split()).value_counts()[:200]
 allcandidates84_freq
+
 
 #Begin 1988 debates
 #October 5, 1988
