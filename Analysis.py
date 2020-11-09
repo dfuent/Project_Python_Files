@@ -1053,49 +1053,85 @@ DEM1996_foreign.sum()
 Oct5_2000_debate = df[df["Debate"]=='October 5, 2000 Debate Transcript']
 Oct5_2000_debate
 
+#testing length
+len(Oct5_2000_debate)
+
 #October 17, 2000
 Oct17_2000_debate = df[df["Debate"]=='October 17, 2000 Debate Transcript']
 Oct17_2000_debate
+
+#testing length
+len(Oct17_2000_debate)
 
 #October 3, 2000
 Oct3_2000_debate = df[df["Debate"]=='October 3, 2000 Transcript']
 Oct3_2000_debate
 
+#testing length
+len(Oct3_2000_debate)
+
 #October 11, 2000
 Oct11_2000_debate = df[df["Debate"]=='October 11, 2000 Debate Transcript']
 Oct11_2000_debate
+
+#testing length
+len(Oct11_2000_debate)
 
 #full debate transcript 2000, includes moderators and any other speakes in addition to candidates
 debates_2000 = Oct5_2000_debate.append([Oct17_2000_debate, Oct3_2000_debate, Oct11_2000_debate])
 debates_2000
 
+#testing length
+len(debates_2000)
+
 #Gore2000
 Gore00 = debates_2000[(debates_2000["Speaker_standardized"]=='Al Gore')]
 Gore00
+
+#testing length
+len(Gore00)
 
 #Lieberman2000
 Lieberman00 = debates_2000[(debates_2000["Speaker_standardized"]=='Joseph Lieberman')]
 Lieberman00
 
+#testing length
+len(Lieberman00)
+
 #Bush2000
 Bush00 = debates_2000[(debates_2000["Speaker_standardized"]=='George W. Bush')]
 Bush00
+
+#testing length
+len(Bush00)
 
 #Cheney2000
 Cheney00 = debates_2000[(debates_2000["Speaker_standardized"]=='Dick Cheney')]
 Cheney00
 
+#testing length
+len(Cheney00)
+
 #GOP2000
 GOP2000=Bush00.append([Cheney00])
 GOP2000
+
+#testing length
+len(GOP2000)
 
 #Dem2000
 Dem2000=Gore00.append([Lieberman00])
 Dem2000
 
+#testing length
+len(Dem2000)
+
 #all candidates 2000
 allcandidates00 = GOP2000.append([Dem2000]) 
 allcandidates00
+
+#testing length
+len(allcandidates00)
 
 #top 200 words
 allcandidates00_freq= pd.Series(' '.join(allcandidates00.Transcript).split()).value_counts()[:200]
@@ -1152,38 +1188,38 @@ debates_2000_Russia.sum()
 
 #analysis of words by party
 
-GOP00_nuclear = GOP00.Transcript.str.count('NUCLEAR')
-GOP00_nuclear.sum()
+GOP2000_nuclear = GOP2000.Transcript.str.count('NUCLEAR')
+GOP2000_nuclear.sum()
 
-DEM00_nuclear = DEM00.Transcript.str.count('NUCLEAR')
-DEM00_nuclear.sum()
+DEM2000_nuclear = DEM2000.Transcript.str.count('NUCLEAR')
+DEM2000_nuclear.sum()
 
-GOP00_atomic = GOP00.Transcript.str.count('ATOMIC')
-GOP00_atomic.sum()
+GOP2000_atomic = GOP2000.Transcript.str.count('ATOMIC')
+GOP2000_atomic.sum()
 
-DEM00_atomic = DEM00.Transcript.str.count('ATOMIC')
-DEM00_atomic.sum()
+DEM2000_atomic = DEM2000.Transcript.str.count('ATOMIC')
+DEM2000_atomic.sum()
 
-GOP00_proliferation = GOP00.Transcript.str.count('PROLIFERATION')
-GOP00_proliferation.sum()
+GOP2000_proliferation = GOP2000.Transcript.str.count('PROLIFERATION')
+GOP2000_proliferation.sum()
 
-DEM00_proliferation = DEM00.Transcript.str.count('PROLIFERATION')
-DEM00_proliferation.sum()
+DEM2000_proliferation = DEM2000.Transcript.str.count('PROLIFERATION')
+DEM2000_proliferation.sum()
 
-GOP00_nonproliferation = GOP00.Transcript.str.count('NONPROLIFERATION')
-GOP00_nonproliferation.sum()
+GOP2000_nonproliferation = GOP2000.Transcript.str.count('NONPROLIFERATION')
+GOP2000_nonproliferation.sum()
 
-DEM00_nonproliferation = DEM00.Transcript.str.count('NONPROLIFERATION')
-DEM00_nonproliferation.sum()
+DEM2000_nonproliferation = DEM2000.Transcript.str.count('NONPROLIFERATION')
+DEM2000_nonproliferation.sum()
 
-GOP00_non_proliferation = GOP00.Transcript.str.count('NON-PROLIFERATION')
-GOP00_non_proliferation.sum()
+GOP2000_non_proliferation = GOP2000.Transcript.str.count('NON-PROLIFERATION')
+GOP2000_non_proliferation.sum()
 
-DEM00_non_proliferation = DEM00.Transcript.str.count('NON-PROLIFERATION')
-DEM00_non_proliferation.sum()
+DEM2000_non_proliferation = DEM2000.Transcript.str.count('NON-PROLIFERATION')
+DEM2000_non_proliferation.sum()
 
-GOP00_armsrace = GOP00.Transcript.str.count('ARMS RACE')
-GOP00_armsrace.sum()
+GOP2000_armsrace = GOP2000.Transcript.str.count('ARMS RACE')
+GOP2000_armsrace.sum()
 
 DEM00_armsrace = DEM00.Transcript.str.count('ARMS RACE')
 DEM00_armsrace.sum()
@@ -1191,43 +1227,46 @@ DEM00_armsrace.sum()
 GOP00_women = GOP00.Transcript.str.count('WOMEN')
 GOP00_women.sum()
 
-DEM00_women = DEM00.Transcript.str.count('WOMEN')
-DEM00_women.sum()
+DEM2000_women = DEM2000.Transcript.str.count('WOMEN')
+DEM2000_women.sum()
 
-GOP00_job = GOP00.Transcript.str.count('JOB')
-GOP00_job.sum()
+GOP2000_job = GOP2000.Transcript.str.count('JOB')
+GOP2000_job.sum()
 
-DEM00_job = DEM00.Transcript.str.count('JOB')
-DEM00_job.sum()
+DEM2000_job = DEM2000.Transcript.str.count('JOB')
+DEM2000_job.sum()
 
-GOP00_jobs = GOP00.Transcript.str.count('JOBS')
-GOP00_jobs.sum()
+GOP2000_jobs = GOP2000.Transcript.str.count('JOBS')
+GOP2000_jobs.sum()
 
-DEM00_jobs = DEM00.Transcript.str.count('JOBS')
-DEM00_jobs.sum()
+DEM2000_jobs = DEM2000.Transcript.str.count('JOBS')
+DEM2000_jobs.sum()
 
-GOP00_unemployment = GOP00.Transcript.str.count('UNEMPLOYMENT')
-GOP00_unemployment.sum()
+GOP2000_unemployment = GOP2000.Transcript.str.count('UNEMPLOYMENT')
+GOP2000_unemployment.sum()
 
-DEM00_unemployment = DEM00.Transcript.str.count('UNEMPLOYMENT')
-DEM00_unemployment.sum()
+DEM2000_unemployment = DEM2000.Transcript.str.count('UNEMPLOYMENT')
+DEM2000_unemployment.sum()
 
-GOP00_world = GOP00.Transcript.str.count('WORLD')
-GOP00_world.sum()
+GOP2000_world = GOP2000.Transcript.str.count('WORLD')
+GOP2000_world.sum()
 
-DEM00_world = DEM00.Transcript.str.count('WORLD')
-DEM00_world.sum()
+DEM2000_world = DEM2000.Transcript.str.count('WORLD')
+DEM2000_world.sum()
 
-GOP00_foreign = GOP00.Transcript.str.count('FOREIGN')
-GOP00_foreign.sum()
+GOP2000_foreign = GOP2000.Transcript.str.count('FOREIGN')
+GOP2000_foreign.sum()
 
-DEM00_foreign = DEM00.Transcript.str.count('FOREIGN')
-DEM00_foreign.sum()
+DEM2000_foreign = DEM2000.Transcript.str.count('FOREIGN')
+DEM2000_foreign.sum()
 
 #Begin 2004
 #October 8, 2004
 Oct8_2004_debate = df[df["Debate"]=='October 8, 2004 Debate Transcript']
 Oct8_2004_debate
+
+#testing length
+len(Oct8_2004_debate)
 
 #September 30, 2004
 Sept30_2004_debate = df[df["Debate"]=='September 30. 2004 Debate Transcript']
