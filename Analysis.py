@@ -64,13 +64,22 @@ debatesdates
 Nixondf = df[df["Speaker_standardized"]=='Richard Nixon']
 Nixondf
 
+#testing length
+len(Nixondf)
+
 # create Kennedy/Dem dataframe for 1960
 Kennedydf = df[df["Speaker_standardized"]=='John F. Kennedy']
 Kennedydf # the copyright information gets attributed to Kennedy
 
+#testing length
+len(Kennedydf)
+
 # create 1960 both candidates dataframe
 debates_1960= Nixondf.append(Kennedydf)
 debates_1960
+
+#testing length
+len(debates_1960)
 
 #top 200 words
 allcandidates60_freq = pd.Series(' '.join(debates_1960.Transcript).split()).value_counts()[:200]
@@ -204,30 +213,51 @@ DEM60_foreign.sum()
 Sept23_1976_debate = df[df["Debate"]=='September 23, 1976 Debate Transcript']
 Sept23_1976_debate
 
+#testing length
+len(Sept23_1976_debate)
+
 #October 6, 1976 debate
 Oct6_1976_debate = df[df["Debate"]=='October 6, 1976 Debate Transcript']
 Oct6_1976_debate
+
+#testing length
+len(Oct6_1976_debate)
 
 #October 22, 1976 debate
 Oct22_1976_debate = df[df["Debate"]=='October 22, 1976 Debate Transcript']
 Oct22_1976_debate
 
+#testing length
+len(Oct22_1976_debate)
+
 #full debate transcript for 1976, includes moderator and any other non-candidate speech
 debates_1976 = Sept23_1976_debate.append([Oct6_1976_debate, Oct22_1976_debate])
 debates_1976
+
+#testing length
+len(debates_1976)
 
 #for Ford/GOP 1976; Ford76 is also what we have for the GOP in 1976 because we don't have the VP debate transcript
 
 Ford76 = debates_1976[(debates_1976["Speaker_standardized"]=='Gerald Ford')]
 Ford76 #row 810 attributes speech from a Mr. Kraft to Ford
 
+#testing length
+len(Ford76)
+
 #Carter/Dem 1976 debates; Carter76 is also what we have for Dems in 1976 because we don't have the VP debate transcript
 Carter76 = debates_1976[(debates_1976["Speaker_standardized"]=='Jimmy Carter')]
 Carter76 # includes (barely audible) in Carter word count
 
+#testing length
+len(Carter76)
+
 #both candidates/parties 1976 (without moderator/others)
 allcandidates76 = Ford76.append([Carter76])
 allcandidates76
+
+#testing length
+len(allcandidates76)
 
 #top 200 words
 allcandidates76_freq= pd.Series(' '.join(allcandidates76.Transcript).split()).value_counts()[:200]
@@ -361,30 +391,50 @@ Carter76_foreign.sum()
 Oct28_1980_debate = df[df["Debate"]=='October 28, 1980 Debate Transcript']
 Oct28_1980_debate
 
+#testing length
+len(Oct28_1980_debate)
+
 #September 21, 1980 debate
 Sept21_1980_debate = df[df["Debate"]=='September 21, 1980 Debate Transcript']
 Sept21_1980_debate
+
+#testing length
+len(Sept21_1980_debate)
 
 #full debate transcript 1980, includes moderators and any other speakes in addition to candidates
 debates_1980 = Oct28_1980_debate.append([Sept21_1980_debate])
 debates_1980
 
+#testing length
+len(debates_1980)
+
 #for Carter/Dems 1980; no VP debate in 1980
 Carter80 = debates_1980[(debates_1980["Speaker_standardized"]=='Jimmy Carter')]
 Carter80
+
+#testing length
+len(Carter80)
 
 #for Reagan/GOP in 1980, no VP debate
 Reagan80 = debates_1980[(debates_1980["Speaker_standardized"]=='Ronald Reagan')]
 Reagan80
 
+#testing length
+len(Reagan80)
+
 #for Anderson/Ind. 1980, no VP debate in 1980
 Anderson80 = debates_1980[(debates_1980["Speaker_standardized"]=='Ronald Reagan')]
 Anderson80
+
+#testing length
+len(Anderson80)
 
 #all candidates 1980
 allcandidates80 = Anderson80.append([Reagan80, Carter80]) 
 allcandidates80
 
+#testing length
+len(allcandidates80)
 
 #Begin 1984 debates
 #October 7, 1984
@@ -406,6 +456,8 @@ debates_1984
 #Democratic party 1984 (Mondale)
 Mondale84 = debates_1984[(debates_1984["Speaker_standardized"]=='Walter Mondale')]
 Mondale84
+
+
 
 #Dem party 1984 (Ferraro)
 Ferraro84 = debates_1984[(debates_1984["Speaker_standardized"]=='Geraldine Ferraro')]
