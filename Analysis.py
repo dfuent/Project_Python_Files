@@ -45,6 +45,19 @@ wordPivot = tdf.pivot_table(index = ['Speaker_fin'], values = ['China Count'], a
 # print(wordPivot)
 wordPivot.to_csv('testwords.csv') 
 
+###########################Caprill's analysis###################################3
+#import packages for dataframes
+import pandas as pd
+import os
+import numpy as np
+
+#read in csv of transcript and related data
+df = pd.read_csv('Transcripts_clean.csv')
+
+#return all unique values in Debate column
+debatesdates=df.Debate.unique()
+debatesdates
+
 #creation of dataframes by election cycle and by candidate/party
 #Begin 1960
 # create Nixon/GOP dataframe for 1960
@@ -62,6 +75,129 @@ debates_1960
 #top 200 words
 allcandidates60_freq = pd.Series(' '.join(debates_1960.Transcript).split()).value_counts()[:200]
 allcandidates60_freq
+
+#analysis of specific words from all candidates 
+debates_60_nuclear = debates_1960.Transcript.str.count('NUCLEAR')
+debates_60_nuclear.sum()
+
+debates_60_atomic = debates_1960.Transcript.str.count('ATOMIC')
+debates_60_atomic.sum()
+
+debates_60_proliferation = debates_1960.Transcript.str.count('PROLIFERATION')
+debates_60_proliferation.sum()
+
+debates_60_nonproliferation = debates_1960.Transcript.str.count('NONPROLIFERATION')
+debates_60_nonproliferation.sum()
+
+debates_60_non_proliferation = debates_1960.Transcript.str.count('NON-PROLIFERATION')
+debates_60_non_proliferation.sum()
+
+debates_60_armsrace = debates_1960.Transcript.str.count('ARMS RACE')
+debates_60_armsrace.sum()
+
+debates_60_women = debates_1960.Transcript.str.count('WOMEN')
+debates_60_women.sum()
+
+debates_60_job = debates_1960.Transcript.str.count('JOB')
+debates_60_job.sum()
+
+debates_60_jobs = debates_1960.Transcript.str.count('JOBS')
+debates_60_jobs.sum()
+
+debates_60_unemployment = debates_1960.Transcript.str.count('UNEMPLOYMENT')
+debates_60_unemployment.sum()
+
+debates_60_world = debates_1960.Transcript.str.count('WORLD')
+debates_60_world.sum()
+
+debates_60_foreign = debates_1960.Transcript.str.count('FOREIGN')
+debates_60_foreign.sum()
+
+debates_60_Iraq = debates_1960.Transcript.str.count('IRAQ')
+debates_60_Iraq.sum()
+
+debates_60_Soviet= debates_1960.Transcript.str.count('SOVIET')
+debates_60_Soviet.sum()
+
+debates_60_Soviets= debates_1960.Transcript.str.count('SOVIETS')
+debates_60_Soviets.sum()
+
+debates_60_Russia= debates_1960.Transcript.str.count('RUSSIA')
+debates_60_Russia.sum()
+
+#analysis of specific word counts by candidate/party
+Nixondf_nuclear = Nixondf.Transcript.str.count('NUCLEAR')
+Nixondf_nuclear.sum()
+
+GOP60_atomic = Nixondf.Transcript.str.count('ATOMIC')
+GOP60_atomic.sum()
+
+GOP60_proliferation = Nixondf.Transcript.str.count('PROLIFERATION')
+GOP60_proliferation.sum()
+
+GOP60_nonproliferation = Nixondf.Transcript.str.count('NONPROLIFERATION')
+GOP60_nonproliferation.sum()
+
+GOP60_non_proliferation = Nixondf.Transcript.str.count('NON-PROLIFERATION')
+GOP60_non_proliferation.sum()
+
+GOP60_armsrace = Nixondf.Transcript.str.count('ARMS RACE')
+GOP60_armsrace.sum()
+
+GOP60_women = Nixondf.Transcript.str.count('WOMEN')
+GOP60_women.sum()
+
+GOP60_job = Nixondf.Transcript.str.count('JOB')
+GOP60_job.sum()
+
+GOP60_jobs = Nixondf.Transcript.str.count('JOBS')
+GOP60_jobs.sum()
+
+GOP60_unemployment = Nixondf.Transcript.str.count('UNEMPLOYMENT')
+GOP60_unemployment.sum()
+
+GOP60_world = Nixondf.Transcript.str.count('WORLD')
+GOP60_world.sum()
+
+GOP60_foreign = Nixondf.Transcript.str.count('FOREIGN')
+GOP60_foreign.sum()
+
+DEM60_nuclear = Kennedydf.Transcript.str.count('NUCLEAR')
+DEM60_nuclear.sum()
+
+DEM60_atomic = Kennedydf.Transcript.str.count('ATOMIC')
+DEM60_atomic.sum()
+
+DEM60_proliferation = Kennedydf.Transcript.str.count('PROLIFERATION')
+DEM60_proliferation.sum()
+
+DEM60_nonproliferation = Kennedydf.Transcript.str.count('NONPROLIFERATION')
+DEM60_nonproliferation.sum()
+
+DEM60_non_proliferation = Kennedydf.Transcript.str.count('NON-PROLIFERATION')
+DEM60_non_proliferation.sum()
+
+DEM60_armsrace = Kennedydf.Transcript.str.count('ARMS RACE')
+DEM60_armsrace.sum()
+
+DEM60_women = Kennedydf.Transcript.str.count('WOMEN')
+DEM60_women.sum()
+
+DEM60_job = Kennedydf.Transcript.str.count('JOB')
+DEM60_job.sum()
+
+DEM60_jobs = Kennedydf.Transcript.str.count('JOBS')
+DEM60_jobs.sum()
+
+DEM60_unemployment = Kennedydf.Transcript.str.count('UNEMPLOYMENT')
+DEM60_unemployment.sum()
+
+DEM60_world = Kennedydf.Transcript.str.count('WORLD')
+DEM60_world.sum()
+
+DEM60_foreign = Kennedydf.Transcript.str.count('FOREIGN')
+DEM60_foreign.sum()
+
 
 #Begin 1976
 #September 23, 1976 debate
