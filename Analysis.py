@@ -1434,6 +1434,129 @@ allcandidates12
 allcandidates12_freq= pd.Series(' '.join(allcandidates12.Transcript).split()).value_counts()[:200]
 allcandidates12_freq
 
+#analysis of particular words by candidates overall in 2012	
+debates_2012_nuclear = debates_2012.Transcript.str.count('NUCLEAR')
+debates_2012_nuclear.sum()	
+
+debates_2012_atomic = debates_2012.Transcript.str.count('ATOMIC')
+debates_2012_atomic.sum()	
+
+debates_2012_proliferation = debates_2012.Transcript.str.count('PROLIFERATION')
+debates_2012_proliferation.sum()
+	
+debates_2012_nonproliferation = debates_2012.Transcript.str.count('NONPROLIFERATION')
+debates_2012_nonproliferation.sum()
+	
+debates_2012_non_proliferation = debates_2012.Transcript.str.count('NON-PROLIFERATION')
+debates_2012_non_proliferation.sum()
+	
+debates_2012_armsrace = debates_2012.Transcript.str.count('ARMS RACE')
+debates_2012_armsrace.sum()	
+
+debates_2012_women = debates_2012.Transcript.str.count('WOMEN')
+debates_2012_women.sum()
+	
+debates_2012_job = debates_2012.Transcript.str.count('JOB')
+debates_2012_job.sum()
+	
+debates_2012_jobs = debates_2012.Transcript.str.count('JOBS')
+debates_2012_jobs.sum()	
+
+debates_2012_unemployment = debates_2012.Transcript.str.count('UNEMPLOYMENT')
+debates_2012_unemployment.sum()	
+
+debates_2012_world = debates_2012.Transcript.str.count('WORLD')
+debates_2012_world.sum()
+	
+debates_2012_foreign = debates_2012.Transcript.str.count('FOREIGN')
+debates_2012_foreign.sum()
+	
+debates_2012_Iraq = debates_2012.Transcript.str.count('IRAQ')
+debates_2012_Iraq.sum()
+	
+debates_2012_Soviet= debates_2012.Transcript.str.count('SOVIET')
+debates_2012_Soviet.sum()
+
+debates_2012_Soviets= debates_2012.Transcript.str.count('SOVIETS')
+debates_2012_Soviets.sum()
+
+debates_2012_Russia= debates_2012.Transcript.str.count('RUSSIA')
+debates_2012_Russia.sum()
+
+#analysis of words by party
+
+GOP12_nuclear = GOP12.Transcript.str.count('NUCLEAR')
+GOP12_nuclear.sum()
+
+DEM12_nuclear = DEM12.Transcript.str.count('NUCLEAR')
+DEM12_nuclear.sum()
+
+GOP12_atomic = GOP12.Transcript.str.count('ATOMIC')
+GOP12_atomic.sum()
+
+DEM12_atomic = DEM12.Transcript.str.count('ATOMIC')
+DEM12_atomic.sum()
+
+GOP12_proliferation = GOP12.Transcript.str.count('PROLIFERATION')
+GOP12_proliferation.sum()
+
+DEM12_proliferation = DEM12.Transcript.str.count('PROLIFERATION')
+DEM12_proliferation.sum()
+
+GOP12_nonproliferation = GOP12.Transcript.str.count('NONPROLIFERATION')
+GOP12_nonproliferation.sum()
+
+DEM12_nonproliferation = DEM12.Transcript.str.count('NONPROLIFERATION')
+DEM12_nonproliferation.sum()
+
+GOP12_non_proliferation = GOP12.Transcript.str.count('NON-PROLIFERATION')
+GOP12_non_proliferation.sum()
+
+DEM12_non_proliferation = DEM12.Transcript.str.count('NON-PROLIFERATION')
+DEM12_non_proliferation.sum()
+
+GOP12_armsrace = GOP12.Transcript.str.count('ARMS RACE')
+GOP12_armsrace.sum()
+
+DEM12_armsrace = DEM12.Transcript.str.count('ARMS RACE')
+DEM12_armsrace.sum()
+
+GOP12_women = GOP12.Transcript.str.count('WOMEN')
+GOP12_women.sum()
+
+DEM12_women = DEM12.Transcript.str.count('WOMEN')
+DEM12_women.sum()
+
+GOP12_job = GOP12.Transcript.str.count('JOB')
+GOP12_job.sum()
+
+DEM12_job = DEM12.Transcript.str.count('JOB')
+DEM12_job.sum()
+
+GOP12_jobs = GOP12.Transcript.str.count('JOBS')
+GOP12_jobs.sum()
+
+DEM12_jobs = DEM12.Transcript.str.count('JOBS')
+DEM12_jobs.sum()
+
+GOP12_unemployment = GOP12.Transcript.str.count('UNEMPLOYMENT')
+GOP12_unemployment.sum()
+
+DEM12_unemployment = DEM12.Transcript.str.count('UNEMPLOYMENT')
+DEM12_unemployment.sum()
+
+GOP12_world = GOP12.Transcript.str.count('WORLD')
+GOP12_world.sum()
+
+DEM12_world = DEM12.Transcript.str.count('WORLD')
+DEM12_world.sum()
+
+GOP12_foreign = GOP12.Transcript.str.count('FOREIGN')
+GOP12_foreign.sum()
+
+DEM12_foreign = DEM12.Transcript.str.count('FOREIGN')
+DEM12_foreign.sum()
+
 #Begin2016
 #October 4, 2016
 Oct4_2016_debate = df[df["Debate"]=='October 4, 2016 Debate Transcript']
