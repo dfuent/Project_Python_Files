@@ -1697,49 +1697,85 @@ Dem2008_foreign.sum()
 Oct16_2012_debate = df[df["Debate"]=='October 16, 2012 Debate Transcript']
 Oct16_2012_debate
 
+#testing length
+len(Oct16_2012_debate)
+
 #October 3, 2012
 Oct3_2012_debate = df[df["Debate"]=='October 3, 2012 Debate Transcript']
 Oct3_2012_debate
+
+#testing length
+len(Oct3_2012_debate)
 
 #October 22, 2012
 Oct22_2012_debate = df[df["Debate"]=='October 22, 2012 Debate Transcript']
 Oct22_2012_debate
 
+#testing length
+len(Oct22_2012_debate)
+
 #October 11, 2012
 Oct11_2012_debate = df[df["Debate"]=='October 11, 2012 Debate Transcript']
 Oct11_2012_debate
+
+#testing length
+len(Oct11_2012_debate)
 
 #full debate transcript 2012, includes moderators and any other speakes in addition to candidates
 debates_2012 = Oct16_2012_debate.append([Oct3_2012_debate, Oct22_2012_debate, Oct11_2012_debate])
 debates_2012
 
+#testing length
+len(debates_2012)
+
 #Obama2012
 Obama12 = debates_2012[(debates_2012["Speaker_standardized"]=='Barack Obama')]
 Obama12
+
+#testing length
+len(Obama12)
 
 #Biden2012
 Biden12 = debates_2012[(debates_2012["Speaker_standardized"]=='Joe Biden')]
 Biden12
 
+#testing length
+len(Biden12)
+
 #Romney2012
 Romney12 = debates_2012[(debates_2012["Speaker_standardized"]=='Mitt Romney')]
 Romney12
+
+#testing length
+len(Romney12)
 
 #Ryan2012
 Ryan12 = debates_2012[(debates_2012["Speaker_standardized"]=='Paul Ryan')]
 Ryan12
 
+#testing length
+len(Ryan12)
+
 #GOP2012
 GOP2012=Romney12.append([Ryan12])
 GOP2012
+
+#testing length
+len(GOP2012)
 
 #Dem2012
 Dem2012=Obama12.append([Biden12])
 Dem2012
 
+#testing length
+len(Dem2012)
+
 #all candidates 2012
 allcandidates12 = GOP2012.append([Dem2012]) 
 allcandidates12
+
+#testing length
+len(allcandidates12)
 
 #top 200 words
 allcandidates12_freq= pd.Series(' '.join(allcandidates12.Transcript).split()).value_counts()[:200]
@@ -1796,77 +1832,77 @@ debates_2012_Russia.sum()
 
 #analysis of words by party
 
-GOP12_nuclear = GOP12.Transcript.str.count('NUCLEAR')
-GOP12_nuclear.sum()
+GOP2012_nuclear = GOP2012.Transcript.str.count('NUCLEAR')
+GOP2012_nuclear.sum()
 
-DEM12_nuclear = DEM12.Transcript.str.count('NUCLEAR')
-DEM12_nuclear.sum()
+Dem2012_nuclear = Dem2012.Transcript.str.count('NUCLEAR')
+Dem2012_nuclear.sum()
 
-GOP12_atomic = GOP12.Transcript.str.count('ATOMIC')
-GOP12_atomic.sum()
+GOP2012_atomic = GOP2012.Transcript.str.count('ATOMIC')
+GOP2012_atomic.sum()
 
-DEM12_atomic = DEM12.Transcript.str.count('ATOMIC')
-DEM12_atomic.sum()
+Dem2012_atomic = Dem2012.Transcript.str.count('ATOMIC')
+Dem2012_atomic.sum()
 
-GOP12_proliferation = GOP12.Transcript.str.count('PROLIFERATION')
-GOP12_proliferation.sum()
+GOP2012_proliferation = GOP2012.Transcript.str.count('PROLIFERATION')
+GOP2012_proliferation.sum()
 
-DEM12_proliferation = DEM12.Transcript.str.count('PROLIFERATION')
-DEM12_proliferation.sum()
+Dem2012_proliferation = Dem2012.Transcript.str.count('PROLIFERATION')
+Dem2012_proliferation.sum()
 
-GOP12_nonproliferation = GOP12.Transcript.str.count('NONPROLIFERATION')
-GOP12_nonproliferation.sum()
+GOP2012_nonproliferation = GOP2012.Transcript.str.count('NONPROLIFERATION')
+GOP2012_nonproliferation.sum()
 
-DEM12_nonproliferation = DEM12.Transcript.str.count('NONPROLIFERATION')
-DEM12_nonproliferation.sum()
+Dem2012_nonproliferation = Dem2012.Transcript.str.count('NONPROLIFERATION')
+Dem2012_nonproliferation.sum()
 
-GOP12_non_proliferation = GOP12.Transcript.str.count('NON-PROLIFERATION')
-GOP12_non_proliferation.sum()
+GOP2012_non_proliferation = GOP2012.Transcript.str.count('NON-PROLIFERATION')
+GOP2012_non_proliferation.sum()
 
-DEM12_non_proliferation = DEM12.Transcript.str.count('NON-PROLIFERATION')
-DEM12_non_proliferation.sum()
+Dem2012_non_proliferation = Dem2012.Transcript.str.count('NON-PROLIFERATION')
+Dem2012_non_proliferation.sum()
 
-GOP12_armsrace = GOP12.Transcript.str.count('ARMS RACE')
-GOP12_armsrace.sum()
+GOP2012_armsrace = GOP2012.Transcript.str.count('ARMS RACE')
+GOP2012_armsrace.sum()
 
-DEM12_armsrace = DEM12.Transcript.str.count('ARMS RACE')
-DEM12_armsrace.sum()
+Dem2012_armsrace = Dem2012.Transcript.str.count('ARMS RACE')
+Dem2012_armsrace.sum()
 
-GOP12_women = GOP12.Transcript.str.count('WOMEN')
-GOP12_women.sum()
+GOP2012_women = GOP2012.Transcript.str.count('WOMEN')
+GOP2012_women.sum()
 
-DEM12_women = DEM12.Transcript.str.count('WOMEN')
-DEM12_women.sum()
+Dem2012_women = Dem2012.Transcript.str.count('WOMEN')
+Dem2012_women.sum()
 
-GOP12_job = GOP12.Transcript.str.count('JOB')
-GOP12_job.sum()
+GOP2012_job = GOP2012.Transcript.str.count('JOB')
+GOP2012_job.sum()
 
-DEM12_job = DEM12.Transcript.str.count('JOB')
-DEM12_job.sum()
+Dem2012_job = Dem2012.Transcript.str.count('JOB')
+Dem2012_job.sum()
 
-GOP12_jobs = GOP12.Transcript.str.count('JOBS')
-GOP12_jobs.sum()
+GOP2012_jobs = GOP2012.Transcript.str.count('JOBS')
+GOP2012_jobs.sum()
 
-DEM12_jobs = DEM12.Transcript.str.count('JOBS')
-DEM12_jobs.sum()
+Dem2012_jobs = Dem2012.Transcript.str.count('JOBS')
+Dem2012_jobs.sum()
 
-GOP12_unemployment = GOP12.Transcript.str.count('UNEMPLOYMENT')
-GOP12_unemployment.sum()
+GOP2012_unemployment = GOP2012.Transcript.str.count('UNEMPLOYMENT')
+GOP2012_unemployment.sum()
 
-DEM12_unemployment = DEM12.Transcript.str.count('UNEMPLOYMENT')
-DEM12_unemployment.sum()
+Dem2012_unemployment = Dem2012.Transcript.str.count('UNEMPLOYMENT')
+Dem2012_unemployment.sum()
 
-GOP12_world = GOP12.Transcript.str.count('WORLD')
-GOP12_world.sum()
+GOP2012_world = GOP2012.Transcript.str.count('WORLD')
+GOP2012_world.sum()
 
-DEM12_world = DEM12.Transcript.str.count('WORLD')
-DEM12_world.sum()
+Dem2012_world = Dem2012.Transcript.str.count('WORLD')
+Dem2012_world.sum()
 
-GOP12_foreign = GOP12.Transcript.str.count('FOREIGN')
-GOP12_foreign.sum()
+GOP2012_foreign = GOP2012.Transcript.str.count('FOREIGN')
+GOP2012_foreign.sum()
 
-DEM12_foreign = DEM12.Transcript.str.count('FOREIGN')
-DEM12_foreign.sum()
+Dem2012_foreign = Dem2012.Transcript.str.count('FOREIGN')
+Dem2012_foreign.sum()
 
 #Begin2016
 #October 4, 2016
