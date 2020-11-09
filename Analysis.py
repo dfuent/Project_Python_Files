@@ -1610,6 +1610,128 @@ allcandidates16
 allcandidates16_freq= pd.Series(' '.join(allcandidates16.Transcript).split()).value_counts()[:200]
 allcandidates16_freq
 
+debates_2016_nuclear = debates_2016.Transcript.str.count('NUCLEAR')
+debates_2016_nuclear.sum()
+	
+debates_2016_atomic = debates_2016.Transcript.str.count('ATOMIC')
+debates_2016_atomic.sum()
+	
+debates_2016_proliferation = debates_2016.Transcript.str.count('PROLIFERATION')
+debates_2016_proliferation.sum()
+	
+debates_2016_nonproliferation = debates_2016.Transcript.str.count('NONPROLIFERATION')
+debates_2016_nonproliferation.sum()
+	
+debates_2016_non_proliferation = debates_2016.Transcript.str.count('NON-PROLIFERATION')
+debates_2016_non_proliferation.sum()
+		
+debates_2016_armsrace = debates_2016.Transcript.str.count('ARMS RACE')
+debates_2016_armsrace.sum()
+	
+debates_2016_women = debates_2016.Transcript.str.count('WOMEN')
+debates_2016_women.sum()
+	
+debates_2016_job = debates_2016.Transcript.str.count('JOB')
+debates_2016_job.sum()	
+
+debates_2016_jobs = debates_2016.Transcript.str.count('JOBS')
+debates_2016_jobs.sum()	
+
+debates_2016_unemployment = debates_2016.Transcript.str.count('UNEMPLOYMENT')
+debates_2016_unemployment.sum()
+	
+debates_2016_world = debates_2016.Transcript.str.count('WORLD')
+debates_2016_world.sum()
+	
+debates_2016_foreign = debates_2016.Transcript.str.count('FOREIGN')
+debates_2016_foreign.sum()
+	
+debates_2016_Iraq = debates_2016.Transcript.str.count('IRAQ')
+debates_2016_Iraq.sum()
+	
+debates_2016_Soviet= debates_2016.Transcript.str.count('SOVIET')	
+debates_2016_Soviet.sum()
+	
+debates_2016_Soviets= debates_2016.Transcript.str.count('SOVIETS')
+debates_2016_Soviets.sum()
+	
+debates_2016_Russia= debates_2016.Transcript.str.count('RUSSIA')
+debates_2016_Russia.sum()
+
+#analysis of words by party
+
+GOP16_nuclear = GOP16.Transcript.str.count('NUCLEAR')
+GOP16_nuclear.sum()
+
+DEM16_nuclear = DEM16.Transcript.str.count('NUCLEAR')
+DEM16_nuclear.sum()
+
+GOP16_atomic = GOP16.Transcript.str.count('ATOMIC')
+GOP16_atomic.sum()
+
+DEM16_atomic = DEM16.Transcript.str.count('ATOMIC')
+DEM16_atomic.sum()
+
+GOP16_proliferation = GOP16.Transcript.str.count('PROLIFERATION')
+GOP16_proliferation.sum()
+
+DEM16_proliferation = DEM16.Transcript.str.count('PROLIFERATION')
+DEM16_proliferation.sum()
+
+GOP16_nonproliferation = GOP16.Transcript.str.count('NONPROLIFERATION')
+GOP16_nonproliferation.sum()
+
+DEM16_nonproliferation = DEM16.Transcript.str.count('NONPROLIFERATION')
+DEM16_nonproliferation.sum()
+
+GOP16_non_proliferation = GOP16.Transcript.str.count('NON-PROLIFERATION')
+GOP16_non_proliferation.sum()
+
+DEM16_non_proliferation = DEM16.Transcript.str.count('NON-PROLIFERATION')
+DEM16_non_proliferation.sum()
+
+GOP16_armsrace = GOP16.Transcript.str.count('ARMS RACE')
+GOP16_armsrace.sum()
+
+DEM16_armsrace = DEM16.Transcript.str.count('ARMS RACE')
+DEM16_armsrace.sum()
+
+GOP16_women = GOP16.Transcript.str.count('WOMEN')
+GOP16_women.sum()
+
+DEM16_women = DEM16.Transcript.str.count('WOMEN')
+DEM16_women.sum()
+
+GOP16_job = GOP16.Transcript.str.count('JOB')
+GOP16_job.sum()
+
+DEM16_job = DEM16.Transcript.str.count('JOB')
+DEM16_job.sum()
+
+GOP16_jobs = GOP16.Transcript.str.count('JOBS')
+GOP16_jobs.sum()
+
+DEM16_jobs = DEM16.Transcript.str.count('JOBS')
+DEM16_jobs.sum()
+
+GOP16_unemployment = GOP16.Transcript.str.count('UNEMPLOYMENT')
+GOP16_unemployment.sum()
+
+DEM16_unemployment = DEM16.Transcript.str.count('UNEMPLOYMENT')
+DEM16_unemployment.sum()
+
+GOP16_world = GOP16.Transcript.str.count('WORLD')
+GOP16_world.sum()
+
+DEM16_world = DEM16.Transcript.str.count('WORLD')
+DEM16_world.sum()
+
+GOP16_foreign = GOP16.Transcript.str.count('FOREIGN')
+GOP16_foreign.sum()
+
+DEM16_foreign = DEM16.Transcript.str.count('FOREIGN')
+DEM16_foreign.sum()
+
 tdf['Jobs Count'] = tdf['Transcript'].str.count('jobs')
 tdf['Economy Count'] = tdf.Transcript.str.count('economy')
 tdf['Growth Count'] = tdf.Transcript.str.count('growth') # modify these to include capital as well
