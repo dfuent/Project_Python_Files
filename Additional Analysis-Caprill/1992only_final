@@ -63,38 +63,65 @@ Russia.sum()
 Bush92 = df[df["Speaker_standardized"]=='George W. Bush']
 Bush92
 
+#length testing
+len(Bush92)
+
 #Quayle1992
 Quayle92 = df[df["Speaker_standardized"]=='Dan Quayle']
 Quayle92
+
+#length testing
+len(Quayle92)
 
 #Clinton1992
 Clinton92 = df[df["Speaker_standardized"]=='Bill Clinton']
 Clinton92
 
+#length testing
+len(Clinton92)
+
 #Gore1992
 Gore92 = df[df["Speaker_standardized"]=='Al Gore']
 Gore92
+
+#length testing
+len(Gore92)
 
 #Perot1992
 Perot92 = df[df["Speaker_standardized"]=='Ross Perot']
 Perot92
 
+#length testing
+len(Perot92)
+
 #Stockdale1992
 Stockdale92 = df[df["Speaker_standardized"]=='Adm. James Stockdale']
 Stockdale92
 
+#length testing
+len(Stockdale92)
+
 #GOP1992
 GOP1992=Bush92.append([Quayle92])
 GOP1992
+
+#length test
+len(GOP1992)
 
 #Dem1992
 
 Dem1992=Clinton92.append([Gore92])
 Dem1992
 
+#length test
+len(Dem1992)
+
 #Ind1992
 Ind1992=Perot92.append([Stockdale92])
 Ind1992
+
+#length test
+len(Ind1992)
 
 GOP1992_nuclear = GOP1992.Transcript.str.count('NUCLEAR')
 GOP1992_nuclear.sum()
