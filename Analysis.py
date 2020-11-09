@@ -723,6 +723,131 @@ allcandidates96
 allcandidates96_freq= pd.Series(' '.join(allcandidates96.Transcript).split()).value_counts()[:200]
 allcandidates96_freq
 
+#analysis of particular words for candidates overall in 1996	
+debates_1996_nuclear = debates_1996.Transcript.str.count('NUCLEAR')
+debates_1996_nuclear.sum()	
+
+debates_1996_atomic = debates_1996.Transcript.str.count('ATOMIC')
+debates_1996_atomic.sum()
+	
+
+debates_1996_proliferation = debates_1996.Transcript.str.count('PROLIFERATION')
+debates_1996_proliferation.sum()	
+
+debates_1996_nonproliferation = debates_1996.Transcript.str.count('NONPROLIFERATION')
+debates_1996_nonproliferation.sum()	
+
+debates_1996_non_proliferation = debates_1996.Transcript.str.count('NON-PROLIFERATION')
+debates_1996_non_proliferation.sum()	
+
+debates_1996_armsrace = debates_1996.Transcript.str.count('ARMS RACE')
+debates_1996_armsrace.sum()	
+
+debates_1996_women = debates_1996.Transcript.str.count('WOMEN')
+debates_1996_women.sum()	
+
+debates_1996_job = debates_1996.Transcript.str.count('JOB')
+debates_1996_job.sum()	
+
+debates_1996_jobs = debates_1996.Transcript.str.count('JOBS')
+debates_1996_jobs.sum()
+	
+debates_1996_unemployment = debates_1996.Transcript.str.count('UNEMPLOYMENT')
+debates_1996_unemployment.sum()	
+
+debates_1996_world = debates_1996.Transcript.str.count('WORLD')
+debates_1996_world.sum()
+
+debates_1996_foreign = debates_1996.Transcript.str.count('FOREIGN')
+debates_1996_foreign.sum()	
+
+debates_1996_Iraq = debates_1996.Transcript.str.count('IRAQ')
+debates_1996_Iraq.sum()	
+
+debates_1996_Soviet= debates_1996.Transcript.str.count('SOVIET')
+debates_1996_Soviet.sum()	
+
+debates_1996_Soviets= debates_1996.Transcript.str.count('SOVIETS')
+debates_1996_Soviets.sum()	
+
+debates_1996_Russia= debates_1996.Transcript.str.count('RUSSIA')
+debates_1996_Russia.sum()
+
+#analysis of words by party
+
+GOP96_nuclear = GOP96.Transcript.str.count('NUCLEAR')
+GOP96_nuclear.sum()
+
+DEM96_nuclear = DEM96.Transcript.str.count('NUCLEAR')
+DEM96_nuclear.sum()
+
+GOP96_atomic = GOP96.Transcript.str.count('ATOMIC')
+GOP96_atomic.sum()
+
+DEM96_atomic = DEM96.Transcript.str.count('ATOMIC')
+DEM96_atomic.sum()
+
+GOP96_proliferation = GOP96.Transcript.str.count('PROLIFERATION')
+GOP96_proliferation.sum()
+
+DEM96_proliferation = DEM96.Transcript.str.count('PROLIFERATION')
+DEM96_proliferation.sum()
+
+GOP96_nonproliferation = GOP96.Transcript.str.count('NONPROLIFERATION')
+GOP96_nonproliferation.sum()
+
+DEM96_nonproliferation = DEM96.Transcript.str.count('NONPROLIFERATION')
+DEM96_nonproliferation.sum()
+
+GOP96_non_proliferation = GOP96.Transcript.str.count('NON-PROLIFERATION')
+GOP96_non_proliferation.sum()
+
+DEM96_non_proliferation = DEM96.Transcript.str.count('NON-PROLIFERATION')
+DEM96_non_proliferation.sum()
+
+GOP96_armsrace = GOP96.Transcript.str.count('ARMS RACE')
+GOP96_armsrace.sum()
+
+DEM96_armsrace = DEM96.Transcript.str.count('ARMS RACE')
+DEM96_armsrace.sum()
+
+GOP96_women = GOP96.Transcript.str.count('WOMEN')
+GOP96_women.sum()
+
+DEM96_women = DEM96.Transcript.str.count('WOMEN')
+DEM96_women.sum()
+
+GOP96_job = GOP96.Transcript.str.count('JOB')
+GOP96_job.sum()
+
+DEM96_job = DEM96.Transcript.str.count('JOB')
+DEM96_job.sum()
+
+GOP96_jobs = GOP96.Transcript.str.count('JOBS')
+GOP96_jobs.sum()
+
+DEM96_jobs = DEM96.Transcript.str.count('JOBS')
+DEM96_jobs.sum()
+
+GOP96_unemployment = GOP96.Transcript.str.count('UNEMPLOYMENT')
+GOP96_unemployment.sum()
+
+DEM96_unemployment = DEM96.Transcript.str.count('UNEMPLOYMENT')
+DEM96_unemployment.sum()
+
+GOP96_world = GOP96.Transcript.str.count('WORLD')
+GOP96_world.sum()
+
+DEM96_world = DEM96.Transcript.str.count('WORLD')
+DEM96_world.sum()
+
+GOP96_foreign = GOP96.Transcript.str.count('FOREIGN')
+GOP96_foreign.sum()
+
+DEM96_foreign = DEM96.Transcript.str.count('FOREIGN')
+DEM96_foreign.sum()
+
+
 #Begin 2000
 #October 5, 2000
 Oct5_2000_debate = df[df["Debate"]=='October 5, 2000 Debate Transcript']
