@@ -39,7 +39,7 @@ yearGroup = pd.merge(yearGroup,econ_df,on='Year',how='left')
 # unemployment rate when incumbent wins or not
 ax = sns.boxplot(x=text_df['incumbent_win'],y=text_df['Unemployment']) # boxplot shows range of unemployment rates when an uncumbent wins or not
 ax.set(xlabel='Incumbent Victory. 1 is yes, 0 is no', ylabel='Unemployment rate %', title='Does a low unemployment rate help an incumbent candidate') # set axes and chart titles
-plt.show()
+plt.show() # after image shows, manually save output to image file for use in presentation and report
 
 # count of specific economic words (stacked) vs unemployment rate
 ax1 = yearGroup[['Jobs Count','Job Count','Economy Count','Economic Count','Growth Count']].plot(kind='bar',stacked=True) # set LHS axis as stacked bar chart of word counts
@@ -49,7 +49,7 @@ plt.xticks(yearGroup.index,yearGroup['Year'].values.astype(int)) # make sure Yea
 ax1.set_ylabel('Number of economic words mentioned') # set LHS y-axis label
 ax2.set_ylabel('Unemployment rate %') # set RHS y-axis label
 plt.title('How often are economic words mentioned as compared to unemployment') # set plot title
-plt.show()
+plt.show() # after image shows, manually save output to image file for use in presentation and report
 
 # create new dataframe that groups word counts by Year and Party
 partyGroup = text_df.groupby(['Year','Party'], as_index=False).sum()
@@ -62,7 +62,7 @@ ax3.set(xlabel='Year', ylabel='Number of economic words mentioned', title='Does 
 ax3.set_xticklabels(yearGroup['Year'].astype(int)) # make sure Year shows in proper format and not as a float
 ax2_2 = yearGroup['Unemployment_y'].plot(secondary_y=True, style='g') # add secondary axis RHS as unemployment rate %
 ax2_2.set_ylabel('Unemployment rate %') # set RHS y-axis label
-plt.show()
+plt.show() # after image shows, manually save output to image file for use in presentation and report
 
 # yearGroup.plot.bar(x='Year',y='Jobs Count',stacked=True)
 ax1 = yearGroup[['Jobs Count','Job Count','Economy Count','Economic Count','Growth Count','Inflation Count']].plot(kind='bar',stacked=True) # show same stacked chart as before but add word inflation to count
@@ -73,7 +73,7 @@ ax1.set_ylabel('Number of economic words mentioned') # set LHS y-axis label
 ax2.set_ylabel('Unemployment rate %') # set RHS y-axis label
 plt.title('How often are economic words mentioned now including "inflation"') # set plot title
 
-plt.show()
+plt.show() # after image shows, manually save output to image file for use in presentation and report
 
 # words as a % of total words
 yearGroup['scale'] = yearGroup['Macro Count']/yearGroup['word_count'] # use total words in a year to scale total economic words
@@ -85,7 +85,7 @@ ax2_1 = yearGroup['Unemployment_y'].plot(secondary_y=True, style='g') # set seco
 plt.xticks(yearGroup.index,yearGroup['Year'].values.astype(int)) # make sure Year shows in proper format and not as a float
 ax1_1.set(xlabel='Year', ylabel='Number of economic as % of total words', title='Does it appear words are used more frequently now because of longer debates') # set x-axis label, LHS y-axis label and chart title
 ax2_1.set(xlabel='Year', ylabel='Unemployment rate %') # set RHS y-axis label
-plt.show()
+plt.show() # after image shows, manually save output to image file for use in presentation and report
 
 # economic words as a % of total words vs unemployment
 ax1_1 = yearGroup['scale w inflation'].plot(kind='bar') # bar chart shows scaled economic word + inflation usage as % of total words
@@ -93,4 +93,4 @@ ax2_1 = yearGroup['Unemployment_y'].plot(secondary_y=True, style='g') # set seco
 plt.xticks(yearGroup.index,yearGroup['Year'].values.astype(int)) # make sure Year shows in proper format and not as a float
 ax1_1.set(xlabel='Year', ylabel='Number of economic as % of total words including "inflation"', title='Does it appear words now because of longer debates (with "inflation")') # set x-axis label, LHS y-axis label and chart title
 ax2_1.set(xlabel='Year', ylabel='Unemployment rate %') # set RHS y-axis label
-plt.show()
+plt.show() # after image shows, manually save output to image file for use in presentation and report
