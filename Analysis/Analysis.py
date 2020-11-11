@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Oct  5 11:56:31 2020
 
-@author: dfuent
-"""
 import pandas as pd
 import os
 import numpy as np
